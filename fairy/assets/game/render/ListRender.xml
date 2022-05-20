@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,90">
+  <controller name="sel" pages="0,,1," selected="0"/>
+  <displayList>
+    <loader id="n0_9imx" name="icon" xy="0,0" size="90,90" url="ui://ecpfrqsm9imxl">
+      <gearColor controller="sel" pages="1" values="#ff0000" default="#ffffff"/>
+    </loader>
+  </displayList>
+</component>

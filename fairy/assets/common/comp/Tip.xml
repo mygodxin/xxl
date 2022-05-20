@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="600,60" extention="Label">
+  <displayList>
+    <image id="n3_ed49" name="n3" src="ed49n5m" fileName="alert/di.png" xy="0,0" size="600,60"/>
+    <text id="n2_dpen" name="title" xy="-110,10" size="821,40" fontSize="28" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="提示文字">
+      <relation target="" sidePair="center-center"/>
+    </text>
+  </displayList>
+  <transition name="show">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="18"/>
+    <item time="0" type="XY" target="n2_dpen" tween="true" startValue="-,10" endValue="-,-160" duration="18"/>
+    <item time="0" type="XY" target="n3_ed49" tween="true" startValue="-,0" endValue="0,-170" duration="18"/>
+    <item time="18" type="Alpha" tween="true" startValue="1" endValue="1" duration="1" label2="hold"/>
+    <item time="18" type="XY" target="n2_dpen" tween="true" startValue="-,-160" endValue="-110,-160" duration="1" label2="hold"/>
+    <item time="18" type="XY" target="n3_ed49" tween="true" startValue="0,-170" endValue="0,-170" duration="1" label2="hold"/>
+    <item time="19" type="Alpha" label="hold" tween="true" startValue="1" endValue="1" duration="29"/>
+    <item time="19" type="XY" target="n2_dpen" label="hold" tween="true" startValue="-110,-160" endValue="-,-160" duration="29"/>
+    <item time="19" type="XY" target="n3_ed49" label="hold" tween="true" startValue="0,-170" endValue="-,-170" duration="29"/>
+  </transition>
+  <transition name="hide">
+    <item time="0" type="Alpha" tween="true" startValue="1" endValue="0" duration="6"/>
+    <item time="0" type="XY" target="n2_dpen" tween="true" startValue="-110,-160" endValue="-110,10" duration="6"/>
+    <item time="0" type="XY" target="n3_ed49" tween="true" startValue="0,-170" endValue="0,0" duration="6"/>
+  </transition>
+</component>

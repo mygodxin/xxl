@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ecpfrqsm">
+  <resources>
+    <component id="9imx0" name="GameWin.xml" path="/" exported="true"/>
+    <image id="9imx1" name="游戏.png" path="/img/"/>
+    <image id="9imx2" name="矩形 3.png" path="/img/"/>
+    <image id="9imx3" name="组 47.png" path="/img/"/>
+    <image id="9imx4" name="组 44@3x.png" path="/img/"/>
+    <image id="9imx5" name="组 44@3x(1).png" path="/img/"/>
+    <image id="9imx6" name="组 44@2x.png" path="/img/"/>
+    <image id="9imx7" name="组 44@2x(1).png" path="/img/"/>
+    <image id="9imx8" name="组 44.png" path="/img/"/>
+    <image id="9imx9" name="组 44(1).png" path="/img/"/>
+    <image id="9imxa" name="组 4@3x.png" path="/img/"/>
+    <image id="9imxb" name="组 4@2x.png" path="/img/" exported="true"/>
+    <image id="9imxc" name="组 4.png" path="/img/"/>
+    <image id="9imxd" name="组 3@3x.png" path="/img/"/>
+    <image id="9imxe" name="组 3@2x.png" path="/img/" exported="true"/>
+    <image id="9imxf" name="组 3.png" path="/img/"/>
+    <image id="9imxg" name="组 2@3x.png" path="/img/"/>
+    <image id="9imxh" name="组 47@2x.png" path="/img/"/>
+    <image id="9imxi" name="组 2@2x.png" path="/img/" exported="true"/>
+    <image id="9imxj" name="组 1@3x.png" path="/img/"/>
+    <image id="9imxk" name="组 1@3x(1).png" path="/img/"/>
+    <image id="9imxl" name="组 1@2x.png" path="/img/" exported="true"/>
+    <image id="9imxm" name="组 1@2x(1).png" path="/img/"/>
+    <image id="9imxn" name="组 1.png" path="/img/"/>
+    <image id="9imxo" name="组 1(1).png" path="/img/"/>
+    <image id="9imxp" name="消消乐背景@3x.png" path="/img/"/>
+    <image id="9imxq" name="消消乐背景@2x.png" path="/img/"/>
+    <image id="9imxr" name="消消乐背景.png" path="/img/"/>
+    <image id="9imxs" name="图层 75@3x.png" path="/img/"/>
+    <image id="9imxt" name="图层 75@2x.png" path="/img/" exported="true"/>
+    <image id="9imxu" name="图层 75.png" path="/img/"/>
+    <image id="9imxv" name="矩形 3@3x.png" path="/img/"/>
+    <image id="9imxw" name="矩形 3@2x.png" path="/img/" scale="9grid" scale9grid="187,65,374,130"/>
+    <image id="9imxx" name="组 2.png" path="/img/"/>
+    <image id="9imxy" name="组 47@3x.png" path="/img/"/>
+    <component id="9imxz" name="ListRender.xml" path="/render/" exported="true"/>
+    <component id="9imx10" name="GameScene.xml" path="/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ev5d5l1x">
+  <resources>
+    <component id="9imx0" name="RankWin.xml" path="/" exported="true"/>
+    <image id="9imx1" name="组 50@2x.png" path="/img/"/>
+    <image id="9imx2" name="排行榜.png" path="/img/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

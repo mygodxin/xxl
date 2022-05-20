@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="eqhf79fh">
+  <resources>
+    <component id="9imx0" name="EndWin.xml" path="/" exported="true"/>
+    <image id="9imx1" name="结束游戏.png" path="/img/"/>
+    <image id="9imx2" name="图层 529@3x.png" path="/img/"/>
+    <image id="9imx3" name="再玩一次.png" path="/img/"/>
+    <image id="9imx4" name="再玩一次@2x.png" path="/img/"/>
+    <image id="9imx5" name="再玩一次@3x.png" path="/img/"/>
+    <image id="9imx6" name="组 50.png" path="/img/"/>
+    <image id="9imx7" name="组 50@2x.png" path="/img/"/>
+    <image id="9imx8" name="组 50@3x.png" path="/img/"/>
+    <image id="9imx9" name="开始游戏.png" path="/img/"/>
+    <image id="9imxa" name="开始游戏@2x.png" path="/img/"/>
+    <image id="9imxb" name="开始游戏@3x.png" path="/img/"/>
+    <image id="9imxc" name="排行榜.png" path="/img/"/>
+    <image id="9imxd" name="排行榜@2x.png" path="/img/"/>
+    <image id="9imxe" name="排行榜@3x.png" path="/img/"/>
+    <image id="9imxf" name="图层 529.png" path="/img/"/>
+    <image id="9imxg" name="图层 529@2x.png" path="/img/"/>
+    <image id="9imxh" name="开始游戏@2x(1).png" path="/img/"/>
+    <image id="9imxi" name="活动规则@2x.png" path="/img/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

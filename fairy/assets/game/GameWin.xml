@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,1334" designImageLayer="1">
+  <displayList>
+    <image id="n1_9imx" name="n1" src="wq8hb" fileName="img/消消乐@2x.png" pkg="59b9xyju" xy="-6,-206" visible="false"/>
+    <image id="n8_9imx" name="n8" src="9imxh" fileName="img/组 47@2x.png" xy="179,190">
+      <relation target="" sidePair="top-top"/>
+    </image>
+    <image id="n3_9imx" name="n3" src="9imxw" fileName="img/矩形 3@2x.png" xy="-11,-207" size="750,412">
+      <relation target="" sidePair="top-top"/>
+    </image>
+    <image id="n6_9imx" name="n6" src="9imx6" fileName="img/组 44@2x.png" xy="61,4"/>
+    <image id="n7_9imx" name="n7" src="9imx7" fileName="img/组 44@2x(1).png" xy="390,4"/>
+    <image id="n9_9imx" name="n9" src="9imxq" fileName="img/消消乐背景@2x.png" xy="34,354">
+      <relation target="n8_9imx" sidePair="middle-middle"/>
+    </image>
+    <list id="n10_9imx" name="list" xy="72,393" size="597,894" layout="flow_hz" scroll="horizontal" margin="5,0,5,0" lineGap="10" colGap="10" defaultItem="ui://ecpfrqsm9imxz" autoClearItems="true">
+      <item icon="ui://ecpfrqsm9imxb"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n12_9imx" name="n12" xy="165,39" size="134,54" fontSize="40" color="#ffffff" bold="true" text="90金币"/>
+    <text id="n13_9imx" name="n13" xy="499,37" size="93,54" fontSize="40" color="#ffffff" vAlign="middle" bold="true" text="48秒"/>
+  </displayList>
+</component>

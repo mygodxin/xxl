@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1366,768">
+  <controller name="c1" pages="0,,1,,2,,3," selected="0"/>
+  <controller name="platform" homePageType="branch" pages="0,wx,1,qq,2,huawei" selected="2"/>
+  <displayList>
+    <component id="n3_h6bv" name="bg" src="h6bv1" fileName="background/BackGround.xml" xy="0,0" size="1366,768">
+      <relation target="" sidePair="width-width,height-height"/>
+      <Label icon="ui://5hq6g0n1qvu53n"/>
+    </component>
+    <image id="n2_onvd" name="n2" src="8a3u2p" fileName="res/Ui_QiDongJieMian_Zi2.png" xy="236,669">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </image>
+    <image id="n8_99g9" name="n8" src="8a3u2n" fileName="res/Ui_QiDongJieMian_Logo.png" xy="355,-1" pivot="0.5,0">
+      <gearSize controller="platform" pages="1" values="656,370,0.85,0.85" default="656,370,1,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n7_m1hi" name="repairButton" src="m1hiq" fileName="IconButton.xml" xy="846,27" size="166,87" group="n17_q7nv" visible="false">
+      <relation target="" sidePair="top-top"/>
+      <Button icon="ui://5hq6g0n18a3u30"/>
+    </component>
+    <component id="n9_8a3u" name="customButton" src="m1hiq" fileName="IconButton.xml" xy="846,27" size="166,87" group="n17_q7nv" visible="false">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://5hq6g0n18a3u2m"/>
+    </component>
+    <loader id="n11_8a3u" name="tip" xy="658,427" pivot="0.5,0.5" size="50,50" group="n17_q7nv" url="ui://5hq6g0n18a3u34" align="center" vAlign="middle">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n12_8a3u" name="info" xy="658,484" pivot="0.5,0.5" size="50,50" group="n17_q7nv" url="ui://5hq6g0n18a3u2q" align="center" vAlign="middle">
+      <gearIcon controller="c1" pages="0,1,2,3" values="ui://5hq6g0n18a3u2q|ui://5hq6g0n18a3u3h|ui://5hq6g0n1oalj3m|"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <group id="n17_q7nv" name="n17" xy="658,27" size="354,507" advanced="true">
+      <gearDisplay controller="platform" pages="0,2"/>
+    </group>
+    <component id="n18_q7nv" name="n18" src="q7nv45" fileName="pack_cntr.xml" xy="565,340" group="n16_q7nv">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n13_q7nv" name="img_pack" src="q7nv46" fileName="res/红包4.png" xy="457,191" pivot="0.5,0.5" group="n16_q7nv" scale="0.5,0.5" visible="false"/>
+    <text id="n14_q7nv" name="txt_progress" xy="567,402" size="181,38" group="n16_q7nv" font="ui://5hq6g0n1q7nv42" fontSize="30" align="center" letterSpacing="-4" autoSize="none" text="67.89%">
+      <relation target="n18_q7nv" sidePair="center-center"/>
+    </text>
+    <image id="n15_q7nv" name="n15" src="q7nv43" fileName="res/说明.png" xy="515,610" group="n16_q7nv">
+      <relation target="" sidePair="center-center"/>
+      <relation target="n18_q7nv" sidePair="top-bottom"/>
+    </image>
+    <group id="n16_q7nv" name="n16" xy="457,191" size="402,546" advanced="true">
+      <gearDisplay controller="platform" pages="1"/>
+    </group>
+    <component id="n21_ogpl" name="loginButton" src="lgux4h" fileName="comps/btn_label.xml" xy="542,548" size="282,94">
+      <gearDisplay controller="platform" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://5hq6g0n1ogpl4p"/>
+    </component>
+  </displayList>
+  <transition name="show">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="12"/>
+  </transition>
+  <transition name="hide">
+    <item time="0" type="Alpha" tween="true" startValue="1" endValue="0" duration="6"/>
+  </transition>
+</component>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="700,450">
+  <controller name="state" pages="0,,1,,2,,3," selected="0"/>
+  <displayList>
+    <component id="n1_m1hi" name="frame" src="m1hi2o" fileName="comp/Frame.xml" xy="0,0" size="700,450" controller="top,1,bg,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <text id="n2_m1hi" name="contentTextFiled" xy="89,107" size="533,171" fontSize="32" color="#9a5c44" align="center" vAlign="middle" autoSize="none" text="提示文字">
+      <relation target="" sidePair="center-center,width-width"/>
+    </text>
+    <component id="n3_m1hi" name="leftButton" src="m1hi34" fileName="comp/LabelButton.xml" xy="92,317" size="218,86">
+      <gearDisplay controller="state" pages="0,1,3"/>
+      <gearXY controller="state" pages="0,1,3" values="92,317|241,316|397,318" default="57,347"/>
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="确定" icon="ui://zmhnw1c6rh6mdn"/>
+    </component>
+    <component id="n4_m1hi" name="rightButton" src="m1hi34" fileName="comp/LabelButton.xml" xy="398,320" size="218,86">
+      <gearDisplay controller="state" pages="0,2,3"/>
+      <gearXY controller="state" pages="0,2,3" values="398,320|228,319|57,318" default="398,346"/>
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="取消" icon="ui://zmhnw1c6rh6mdm"/>
+    </component>
+  </displayList>
+</component>

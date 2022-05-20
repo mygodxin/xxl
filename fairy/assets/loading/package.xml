@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="5hq6g0n1">
+  <resources>
+    <component id="onvd0" name="Main.xml" path="/" exported="true"/>
+    <component id="h6bv1" name="BackGround.xml" path="/background/" exported="true"/>
+    <image id="vw7c3" name="start.png" path="/"/>
+    <image id="m7ms21" name="bg1.png" path="/background/"/>
+    <image id="m1hi5" name="开始游戏.png" path="/"/>
+    <font id="m1hi7" name="Font1.fnt" path="/fonts/font1/"/>
+    <image id="m1hi8" name="载.png" path="/fonts/font1/"/>
+    <image id="m1hi9" name="在.png" path="/fonts/font1/"/>
+    <image id="m1hia" name="正.png" path="/fonts/font1/"/>
+    <image id="m1hib" name="%.png" path="/fonts/font1/"/>
+    <image id="m1hic" name="0.png" path="/fonts/font1/"/>
+    <image id="m1hid" name="1.png" path="/fonts/font1/"/>
+    <image id="m1hie" name="2.png" path="/fonts/font1/"/>
+    <image id="m1hif" name="3.png" path="/fonts/font1/"/>
+    <image id="m1hig" name="4.png" path="/fonts/font1/"/>
+    <image id="m1hih" name="5.png" path="/fonts/font1/"/>
+    <image id="m1hii" name="6.png" path="/fonts/font1/"/>
+    <image id="m1hij" name="7.png" path="/fonts/font1/"/>
+    <image id="m1hik" name="8.png" path="/fonts/font1/"/>
+    <image id="m1hil" name="9.png" path="/fonts/font1/"/>
+    <image id="m1him" name="场.png" path="/fonts/font1/"/>
+    <image id="m1hin" name="加.png" path="/fonts/font1/"/>
+    <image id="m1hio" name="景.png" path="/fonts/font1/"/>
+    <image id="m1hip" name="点.png" path="/fonts/font1/"/>
+    <component id="m1hiq" name="IconButton.xml" path="/"/>
+    <component id="99g922" name="Waiting.xml" path="/" exported="true"/>
+    <image id="99g923" name="waitlogo.png" path="/"/>
+    <image id="iaie27" name="21.png" path="/"/>
+    <image id="ohjo28" name="(.png" path="/fonts/font1/"/>
+    <image id="ohjo29" name=").png" path="/fonts/font1/"/>
+    <image id="ohjo2a" name="登.png" path="/fonts/font1/"/>
+    <image id="ohjo2b" name="服.png" path="/fonts/font1/"/>
+    <image id="ohjo2c" name="录.png" path="/fonts/font1/"/>
+    <image id="ohjo2d" name="器.png" path="/fonts/font1/"/>
+    <image id="ohjo2e" name="微.png" path="/fonts/font1/"/>
+    <image id="ohjo2f" name="务.png" path="/fonts/font1/"/>
+    <image id="ohjo2g" name="信.png" path="/fonts/font1/"/>
+    <image id="ohjo2h" name="重.png" path="/fonts/font1/"/>
+    <image id="ohjo2i" name="败.png" path="/fonts/font1/"/>
+    <image id="ohjo2j" name="失.png" path="/fonts/font1/"/>
+    <image id="ohjo2k" name="试.png" path="/fonts/font1/"/>
+    <image id="8a3u2l" name="Ui_QiDongJieMian_Button_KaiShiYouXi2.png" path="/res/"/>
+    <image id="8a3u2m" name="Ui_QiDongJieMian_Button_KeFu.png" path="/res/"/>
+    <image id="8a3u2n" name="Ui_QiDongJieMian_Logo.png" path="/res/"/>
+    <image id="8a3u2p" name="Ui_QiDongJieMian_Zi2.png" path="/res/"/>
+    <image id="8a3u2q" name="Ui_QiDongJieMian_Zi3.png" path="/res/"/>
+    <image id="8a3u2r" name="Ui_QiDongJieMian_Zi4.png" path="/res/"/>
+    <image id="8a3u30" name="修复.png" path="/res/"/>
+    <image id="8a3u34" name="t0.png" path="/res/" exported="true"/>
+    <image id="8a3u35" name="t1.png" path="/res/" exported="true"/>
+    <image id="8a3u38" name="t2.png" path="/res/"/>
+    <image id="8a3u39" name="t3.png" path="/res/" exported="true"/>
+    <image id="8a3u3a" name="t4.png" path="/res/" exported="true"/>
+    <image id="8a3u3b" name="t5.png" path="/res/" exported="true"/>
+    <image id="8a3u3c" name="t6.png" path="/res/"/>
+    <image id="8a3u3h" name="正在登陆.png" path="/res/"/>
+    <component id="flox3i" name="LoadingWait.xml" path="/wait/" exported="true"/>
+    <image id="flox3j" name="waiting.png" path="/wait/"/>
+    <image id="flox3k" name="waitBg_3.png" path="/wait/"/>
+    <image id="flox3l" name="waitBg_1.png" path="/wait/"/>
+    <image id="oalj3m" name="资源加载完成，请登录！.png" path="/res/"/>
+    <image id="qvu53n" name="bg.png" path="/background/" exported="true" atlas="alone"/>
+    <image id="st2n3o" name="waitBg_2.png" path="/wait/" scale="9grid" scale9grid="25,7,19,8"/>
+    <image id="q7nv3q" name="0.png" path="/fonts/redpack/"/>
+    <image id="q7nv3r" name="1.png" path="/fonts/redpack/"/>
+    <image id="q7nv3s" name="2.png" path="/fonts/redpack/"/>
+    <image id="q7nv3t" name="3.png" path="/fonts/redpack/"/>
+    <image id="q7nv3u" name="4.png" path="/fonts/redpack/"/>
+    <image id="q7nv3v" name="5.png" path="/fonts/redpack/"/>
+    <image id="q7nv3w" name="6.png" path="/fonts/redpack/"/>
+    <image id="q7nv3x" name="7.png" path="/fonts/redpack/"/>
+    <image id="q7nv3y" name="8.png" path="/fonts/redpack/"/>
+    <image id="q7nv3z" name="9.png" path="/fonts/redpack/"/>
+    <image id="q7nv40" name="百分比.png" path="/fonts/redpack/"/>
+    <image id="q7nv41" name="点.png" path="/fonts/redpack/"/>
+    <font id="q7nv42" name="redpack.fnt" path="/fonts/redpack/" exported="true"/>
+    <image id="q7nv43" name="说明.png" path="/res/"/>
+    <image id="q7nv44" name="红包250.png" path="/res/" atlas="alone"/>
+    <component id="q7nv45" name="pack_cntr.xml" path="/"/>
+    <image id="q7nv46" name="红包4.png" path="/res/" atlas="alone_npot"/>
+    <component id="lgux47" name="AlertWin.xml" path="/" exported="true"/>
+    <component id="lgux48" name="Frame.xml" path="/comps/"/>
+    <image id="lgux49" name="透明底.png" path="/res/" scale="9grid" scale9grid="27,16,7,6"/>
+    <image id="lgux4a" name="3光.png" path="/res/"/>
+    <image id="lgux4b" name="1底.png" path="/res/" scale="9grid" scale9grid="42,36,8,13"/>
+    <image id="lgux4c" name="1光.png" path="/res/" scale9grid="97,19,194,38"/>
+    <image id="lgux4d" name="抬头.png" path="/res/"/>
+    <image id="lgux4e" name="光.png" path="/res/"/>
+    <image id="lgux4f" name="2底.png" path="/res/" scale="9grid" scale9grid="31,24,6,9"/>
+    <component id="lgux4g" name="comp_scroll.xml" path="/comps/"/>
+    <component id="lgux4h" name="btn_label.xml" path="/comps/"/>
+    <font id="lgux4i" name="Font2.fnt" path="/font/" exported="true"/>
+    <image id="lgux4j" name="拒.png" path="/font/"/>
+    <image id="lgux4k" name="绝.png" path="/font/"/>
+    <image id="lgux4l" name="同.png" path="/font/"/>
+    <image id="lgux4m" name="意.png" path="/font/"/>
+    <image id="lgux4n" name="黄色.png" path="/res/"/>
+    <image id="lgux4o" name="绿色.png" path="/res/"/>
+    <image id="ogpl4p" name="登录.png" path="/res/"/>
+  </resources>
+  <publish name="loading" path="../assets/resources/fui" packageCount="2" maxAtlasSize="1024" rotation="true"/>
+</packageDescription>

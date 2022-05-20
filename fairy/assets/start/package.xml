@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="59b9xyju">
+  <resources>
+    <component id="wq8h0" name="StartScene.xml" path="/" exported="true"/>
+    <image id="wq8h1" name="活动规则.png" path="/img/"/>
+    <image id="wq8h2" name="活动规则@2x.png" path="/img/"/>
+    <image id="wq8h3" name="活动规则@3x.png" path="/img/"/>
+    <image id="wq8h4" name="开始游戏.png" path="/img/"/>
+    <image id="wq8h5" name="开始游戏@2x.png" path="/img/"/>
+    <image id="wq8h6" name="开始游戏@3x.png" path="/img/"/>
+    <image id="wq8h7" name="排行榜.png" path="/img/"/>
+    <image id="wq8h8" name="排行榜@2x.png" path="/img/"/>
+    <image id="wq8h9" name="排行榜@3x.png" path="/img/"/>
+    <image id="wq8ha" name="消消乐.png" path="/img/"/>
+    <image id="wq8hb" name="消消乐@2x.png" path="/img/" exported="true"/>
+    <image id="wq8hc" name="消消乐@3x.png" path="/img/"/>
+    <image id="wq8hd" name="主页面.png" path="/img/"/>
+    <component id="9imxe" name="RuleWin.xml" path="/" exported="true"/>
+    <image id="9imxf" name="组 65.png" path="/img/"/>
+    <image id="9imxg" name="组 65@2x.png" path="/img/"/>
+    <image id="9imxh" name="组 65@3x.png" path="/img/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

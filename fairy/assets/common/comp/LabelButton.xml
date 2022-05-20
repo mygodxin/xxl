@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="218,86" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <loader id="n0_m1hi" name="icon" xy="0,0" size="218,86" url="ui://zmhnw1c6rh6mdn" autoSize="true"/>
+    <text id="n1_m1hi" name="title" xy="104,14" size="10,47" font="ui://zmhnw1c6h6bvy" fontSize="38" leading="0" letterSpacing="1" text="">
+      <relation target="" sidePair="center-center"/>
+    </text>
+  </displayList>
+  <Button sound="ui://8oggdqifn0gioniv" downEffect="scale" downEffectValue="1.05"/>
+  <relation target="n0_m1hi" sidePair="width-width,height-height"/>
+</component>

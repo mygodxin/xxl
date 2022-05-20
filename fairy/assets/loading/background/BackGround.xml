@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1366,768" extention="Label">
+  <displayList>
+    <loader id="n1_h6bv" name="image" xy="0,0" size="1366,768" align="center" vAlign="middle" fill="scaleNoBorder">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n0_h6bv" name="icon" xy="0,0" size="1366,768" align="center" vAlign="middle" fill="scaleNoBorder">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Alpha" target="n0_h6bv" tween="true" startValue="1" endValue="0" duration="36"/>
+  </transition>
+</component>

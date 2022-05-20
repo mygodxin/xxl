@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="256,256" extention="Label">
+  <displayList>
+    <graph id="n1_99g9" name="n1" xy="0,0" size="256,256" type="rect" lineSize="0" fillColor="#26000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n0_99g9" name="n0" src="99g923" fileName="waitlogo.png" xy="73,73" pivot="0.5,0.5">
+      <relation target="" sidePair="middle-middle,center-center"/>
+    </image>
+    <text id="n2_pmfj" name="title" xy="122,207" size="10,39" fontSize="30" color="#ffffff" text="">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+    </text>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Rotation" target="n0_99g9" tween="true" startValue="0" endValue="60" duration="18"/>
+    <item time="18" type="Rotation" target="n0_99g9" tween="true" startValue="60" endValue="120" duration="24" ease="Quad.InOut"/>
+    <item time="42" type="Rotation" target="n0_99g9" tween="true" startValue="120" endValue="180" duration="18" ease="Quad.In"/>
+  </transition>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="126,126" extention="Label">
+  <displayList>
+    <text id="n0_rlim" name="title" xy="0,0" size="126,126" fontSize="12" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n1_rlim" name="n1" src="i23bioogs" fileName="equipSlot/equip_2201/item_spring_frame.png" xy="-2,7"/>
+    <image id="n2_rlim" name="n2" src="i23bioogr" fileName="equipSlot/equip_2201/item_spring_bomb.png" xy="-4,43"/>
+  </displayList>
+</component>

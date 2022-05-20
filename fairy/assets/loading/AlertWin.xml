@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="700,450">
+  <displayList>
+    <component id="n0_jfhm" name="n0" src="lgux48" fileName="alert/comps/Frame.xml" xy="0,0" size="700,450"/>
+    <component id="n1_jfhm" name="n1" src="lgux4g" fileName="alert/comps/comp_scroll.xml" xy="57,85" size="602,226"/>
+    <component id="n2_jfhm" name="btn_no" src="lgux4h" fileName="alert/comps/btn_label.xml" xy="101,322" size="218,86">
+      <Button title="拒绝" icon="ui://5hq6g0n1lgux4n"/>
+    </component>
+    <component id="n3_jfhm" name="btn_ok" src="lgux4h" fileName="alert/comps/btn_label.xml" xy="392,322" size="218,86">
+      <Button title="同意" icon="ui://5hq6g0n1lgux4o"/>
+    </component>
+  </displayList>
+</component>

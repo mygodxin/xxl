@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="zmhnw1c6">
+  <resources>
+    <folder id="/equipSlot/" name="equipSlot" path="/" atlas="1"/>
+    <image id="ajl110" name="5.png" path="/fonts/price/"/>
+    <image id="ajl111" name="6.png" path="/fonts/price/"/>
+    <image id="ajl112" name="7.png" path="/fonts/price/"/>
+    <image id="ajl113" name="8.png" path="/fonts/price/"/>
+    <image id="ajl114" name="9.png" path="/fonts/price/"/>
+    <image id="ajl115" name="点.png" path="/fonts/price/"/>
+    <image id="ajl116" name="￥.png" path="/fonts/price/"/>
+    <image id="ajl117" name="0.png" path="/fonts/price/"/>
+    <image id="ajl118" name="1.png" path="/fonts/price/"/>
+    <image id="ajl119" name="2.png" path="/fonts/price/"/>
+    <image id="ajl11a" name="3.png" path="/fonts/price/"/>
+    <image id="ajl11b" name="4.png" path="/fonts/price/"/>
+    <font id="ajl11c" name="price.fnt" path="/fonts/price/" exported="true"/>
+    <image id="sytb1n" name="券.png" path="/fonts/price/"/>
+    <image id="sytb1o" name="钱.png" path="/fonts/price/"/>
+    <image id="rh6mdl" name="灰色.png" path="/res/button/" exported="true"/>
+    <image id="rh6mdm" name="绿色.png" path="/res/button/" exported="true"/>
+    <image id="rh6mdn" name="黄色.png" path="/res/button/" exported="true"/>
+    <font id="utzf45" name="白棕.fnt" path="/fonts/白棕/" exported="true"/>
+    <image id="utzf46" name="9.png" path="/fonts/白棕/"/>
+    <image id="utzf47" name="蛋.png" path="/fonts/白棕/"/>
+    <image id="utzf48" name="金.png" path="/fonts/白棕/"/>
+    <image id="utzf49" name="￥.png" path="/fonts/白棕/"/>
+    <image id="utzf4a" name="0.png" path="/fonts/白棕/"/>
+    <image id="utzf4b" name="1.png" path="/fonts/白棕/"/>
+    <image id="utzf4c" name="2.png" path="/fonts/白棕/"/>
+    <image id="utzf4d" name="3.png" path="/fonts/白棕/"/>
+    <image id="utzf4e" name="4.png" path="/fonts/白棕/"/>
+    <image id="utzf4f" name="5.png" path="/fonts/白棕/"/>
+    <image id="utzf4g" name="6.png" path="/fonts/白棕/"/>
+    <image id="utzf4h" name="7.png" path="/fonts/白棕/"/>
+    <image id="utzf4i" name="8.png" path="/fonts/白棕/"/>
+    <image id="nij1nal" name="..png" path="/fonts/白棕/"/>
+    <image id="gg9inds" name="？.png" path="/fonts/白棕/"/>
+    <image id="gg9indt" name="x.png" path="/fonts/白棕/"/>
+    <image id="gg9ine2" name="敬.png" path="/fonts/白棕/"/>
+    <image id="gg9ine3" name="期.png" path="/fonts/白棕/"/>
+    <image id="gg9ine4" name="请.png" path="/fonts/白棕/"/>
+    <image id="gg9ine5" name="待.png" path="/fonts/白棕/"/>
+    <image id="gfifonfs" name="券.png" path="/fonts/白棕/"/>
+    <image id="lykfong1" name="包.png" path="/fonts/白棕/"/>
+    <image id="lykfong2" name="红.png" path="/fonts/白棕/"/>
+    <image id="lykfong3" name="天.png" path="/fonts/白棕/"/>
+    <image id="lykfong4" name="元.png" path="/fonts/白棕/"/>
+    <image id="lqgtonj0" name="金蛋.png" path="/fonts/白棕/"/>
+    <font id="skb729" name="黑白.fnt" path="/fonts/黑白/" exported="true"/>
+    <image id="skb72a" name="1.png" path="/fonts/黑白/"/>
+    <image id="skb72b" name="2.png" path="/fonts/黑白/"/>
+    <image id="skb72c" name="3.png" path="/fonts/黑白/"/>
+    <image id="skb72d" name="4.png" path="/fonts/黑白/"/>
+    <image id="skb72e" name="5.png" path="/fonts/黑白/"/>
+    <image id="skb72f" name="6.png" path="/fonts/黑白/"/>
+    <image id="skb72g" name="7.png" path="/fonts/黑白/"/>
+    <image id="skb72h" name="8.png" path="/fonts/黑白/"/>
+    <image id="skb72i" name="9.png" path="/fonts/黑白/"/>
+    <image id="skb72j" name="0.png" path="/fonts/黑白/"/>
+    <image id="g1q8onj1" name="们.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj2" name="入.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj3" name="关.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj4" name="加.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj5" name="友.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj6" name="好.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj7" name="对.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj8" name="我.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onj9" name="战.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onja" name="有.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onjb" name="注.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onjc" name="礼.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onjd" name="请.png" path="/fonts/黑灰/temp/"/>
+    <image id="g1q8onje" name="邀.png" path="/fonts/黑灰/temp/"/>
+    <image id="nij1nbc" name="励.png" path="/fonts/黑灰/"/>
+    <image id="nij1nbd" name="名.png" path="/fonts/黑灰/"/>
+    <image id="nij1nbe" name="奖.png" path="/fonts/黑灰/"/>
+    <image id="nij1nbf" name="态.png" path="/fonts/黑灰/"/>
+    <image id="nij1nbh" name="时.png" path="/fonts/黑灰/"/>
+    <image id="nij1nbi" name="状.png" path="/fonts/黑灰/"/>
+    <image id="nij1nbj" name="称.png" path="/fonts/黑灰/"/>
+    <image id="viwwn7o" name="兑换记录.png" path="/fonts/黑灰/"/>
+    <font id="n301n6r" name="黑灰.fnt" path="/fonts/黑灰/" exported="true"/>
+    <image id="n301n6s" name="创.png" path="/fonts/黑灰/"/>
+    <image id="n301n6t" name="的.png" path="/fonts/黑灰/"/>
+    <image id="n301n6u" name="房.png" path="/fonts/黑灰/"/>
+    <image id="n301n6v" name="绩.png" path="/fonts/黑灰/"/>
+    <image id="n301n6w" name="加.png" path="/fonts/黑灰/"/>
+    <image id="n301n6x" name="间.png" path="/fonts/黑灰/"/>
+    <image id="n301n6y" name="建.png" path="/fonts/黑灰/"/>
+    <image id="n301n6z" name="入.png" path="/fonts/黑灰/"/>
+    <image id="n301n70" name="我.png" path="/fonts/黑灰/"/>
+    <image id="n301n71" name="战.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7g" name="成.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7h" name="法.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7i" name="介.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7j" name="流.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7k" name="绍.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7l" name="水.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7m" name="玩.png" path="/fonts/黑灰/"/>
+    <image id="l24pn7n" name="总.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9l" name="记.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9m" name="录.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9n" name="前.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9o" name="往.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9q" name="包.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9r" name="蛋.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9s" name="兑.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9t" name="红.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9u" name="换.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9v" name="金.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9w" name="去.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9x" name="实.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9y" name="物.png" path="/fonts/黑灰/"/>
+    <image id="hbvin9z" name="赚.png" path="/fonts/黑灰/"/>
+    <image id="hc7knck" name="0.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncl" name="1.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncm" name="2.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncn" name="3.png" path="/fonts/黑灰/"/>
+    <image id="hc7knco" name="4.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncp" name="5.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncq" name="7.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncr" name="8.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncs" name="9.png" path="/fonts/黑灰/"/>
+    <image id="hc7knct" name="人.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncu" name="任.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncv" name="元.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncw" name="利.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncx" name="务.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncy" name="新.png" path="/fonts/黑灰/"/>
+    <image id="hc7kncz" name="日.png" path="/fonts/黑灰/"/>
+    <image id="hc7knd0" name="每.png" path="/fonts/黑灰/"/>
+    <image id="hc7knd1" name="福.png" path="/fonts/黑灰/"/>
+    <image id="hc7knd2" name="领.png" path="/fonts/黑灰/"/>
+    <image id="109eoneh" name="邮.png" path="/fonts/黑灰/"/>
+    <image id="109eonei" name="游.png" path="/fonts/黑灰/"/>
+    <image id="109eonej" name="告.png" path="/fonts/黑灰/"/>
+    <image id="109eonek" name="公.png" path="/fonts/黑灰/"/>
+    <image id="109eonel" name="件.png" path="/fonts/黑灰/"/>
+    <image id="109eonem" name="统.png" path="/fonts/黑灰/"/>
+    <image id="109eonen" name="戏.png" path="/fonts/黑灰/"/>
+    <image id="109eoneo" name="系.png" path="/fonts/黑灰/"/>
+    <image id="fx37onet" name="说.png" path="/fonts/黑灰/"/>
+    <image id="fx37oneu" name="提.png" path="/fonts/黑灰/"/>
+    <image id="fx37onev" name="温.png" path="/fonts/黑灰/"/>
+    <image id="fx37onex" name="馨.png" path="/fonts/黑灰/"/>
+    <image id="fx37oney" name="更.png" path="/fonts/黑灰/"/>
+    <image id="fx37onez" name="明.png" path="/fonts/黑灰/"/>
+    <image id="fx37onf0" name="示.png" path="/fonts/黑灰/"/>
+    <image id="e1k8onft" name="门.png" path="/fonts/黑灰/"/>
+    <image id="e1k8onfu" name="热.png" path="/fonts/黑灰/"/>
+    <image id="mdyeonij" name="注.png" path="/fonts/黑灰/"/>
+    <image id="mdyeonik" name="对.png" path="/fonts/黑灰/"/>
+    <image id="mdyeonil" name="好.png" path="/fonts/黑灰/"/>
+    <image id="mdyeonim" name="友.png" path="/fonts/黑灰/"/>
+    <image id="mdyeonin" name="关.png" path="/fonts/黑灰/"/>
+    <image id="mdyeonio" name="们.png" path="/fonts/黑灰/"/>
+    <image id="lqgtoniw" name="城.png" path="/fonts/黑灰/"/>
+    <image id="lqgtonix" name="道.png" path="/fonts/黑灰/"/>
+    <image id="lqgtoniy" name="具.png" path="/fonts/黑灰/"/>
+    <image id="lqgtoniz" name="商.png" path="/fonts/黑灰/"/>
+    <font id="h6bvy" name="灰白.fnt" path="/fonts/灰白/" exported="true"/>
+    <image id="m1hi35" name="取.png" path="/fonts/灰白/"/>
+    <image id="m1hi36" name="确.png" path="/fonts/灰白/"/>
+    <image id="m1hi37" name="消.png" path="/fonts/灰白/"/>
+    <image id="m1hi38" name="定.png" path="/fonts/灰白/"/>
+    <image id="utzf3x" name="1游.png" path="/fonts/灰白/"/>
+    <image id="utzf3y" name="1则.png" path="/fonts/灰白/"/>
+    <image id="utzf3z" name="1规.png" path="/fonts/灰白/"/>
+    <image id="utzf40" name="1戏.png" path="/fonts/灰白/"/>
+    <image id="gh0z51" name="击.png" path="/fonts/灰白/"/>
+    <image id="gh0z52" name="领.png" path="/fonts/灰白/"/>
+    <image id="gh0z53" name="请.png" path="/fonts/灰白/"/>
+    <image id="gh0z55" name="去.png" path="/fonts/灰白/"/>
+    <image id="gh0z56" name="邀.png" path="/fonts/灰白/"/>
+    <image id="gh0z57" name="点.png" path="/fonts/灰白/"/>
+    <image id="i9bx58" name="一.png" path="/fonts/灰白/"/>
+    <image id="i9bx59" name="键.png" path="/fonts/灰白/"/>
+    <image id="iaie5b" name="!.png" path="/fonts/灰白/"/>
+    <image id="iaie5c" name="道.png" path="/fonts/灰白/"/>
+    <image id="iaie5d" name="好.png" path="/fonts/灰白/"/>
+    <image id="iaie5e" name="了.png" path="/fonts/灰白/"/>
+    <image id="iaie5f" name="知.png" path="/fonts/灰白/"/>
+    <image id="10bln5i" name="友.png" path="/fonts/灰白/"/>
+    <image id="10bln5j" name="推.png" path="/fonts/灰白/"/>
+    <image id="10bln5l" name="荐.png" path="/fonts/灰白/"/>
+    <image id="o7pxn9g" name="建.png" path="/fonts/灰白/"/>
+    <image id="6eljn7d" name="创.png" path="/fonts/灰白/"/>
+    <image id="is9cn9m" name="快.png" path="/fonts/灰白/"/>
+    <image id="is9cn9n" name="始.png" path="/fonts/灰白/"/>
+    <image id="is9cn9o" name="速.png" path="/fonts/灰白/"/>
+    <image id="is9cn9p" name="开.png" path="/fonts/灰白/"/>
+    <image id="iuaencg" name="登.png" path="/fonts/灰白/"/>
+    <image id="iuaench" name="即.png" path="/fonts/灰白/"/>
+    <image id="iuaenci" name="立.png" path="/fonts/灰白/"/>
+    <image id="iuaencj" name="录.png" path="/fonts/灰白/"/>
+    <image id="skb71o" name="不.png" path="/fonts/灰白/"/>
+    <image id="skb71p" name="出.png" path="/fonts/灰白/"/>
+    <image id="skb71q" name="牌.png" path="/fonts/灰白/"/>
+    <image id="skb71r" name="起.png" path="/fonts/灰白/"/>
+    <image id="skb71s" name="要.png" path="/fonts/灰白/"/>
+    <image id="skb71t" name="准.png" path="/fonts/灰白/"/>
+    <image id="skb71u" name="备.png" path="/fonts/灰白/"/>
+    <image id="skb71z" name="示.png" path="/fonts/灰白/"/>
+    <image id="skb720" name="提.png" path="/fonts/灰白/"/>
+    <image id="l63s3y" name="手.png" path="/fonts/灰白/"/>
+    <image id="l63s40" name="来.png" path="/fonts/灰白/"/>
+    <image id="l63s41" name="局.png" path="/fonts/灰白/"/>
+    <image id="l63s43" name="个.png" path="/fonts/灰白/"/>
+    <image id="l63s44" name="对.png" path="/fonts/灰白/"/>
+    <image id="l63s45" name="再.png" path="/fonts/灰白/"/>
+    <image id="l24p7e" name="+.png" path="/fonts/灰白/"/>
+    <image id="l24p7f" name="0.png" path="/fonts/灰白/"/>
+    <image id="l24p7g" name="1.png" path="/fonts/灰白/"/>
+    <image id="l24p7h" name="2.png" path="/fonts/灰白/"/>
+    <image id="l24p7i" name="3.png" path="/fonts/灰白/"/>
+    <image id="l24p7j" name="4.png" path="/fonts/灰白/"/>
+    <image id="l24p7k" name="5.png" path="/fonts/灰白/"/>
+    <image id="l24p7l" name="6.png" path="/fonts/灰白/"/>
+    <image id="l24p7m" name="7.png" path="/fonts/灰白/"/>
+    <image id="l24p7n" name="8.png" path="/fonts/灰白/"/>
+    <image id="l24p7o" name="9.png" path="/fonts/灰白/"/>
+    <image id="l24p7p" name="乘.png" path="/fonts/灰白/"/>
+    <image id="l24p7q" name="除以.png" path="/fonts/灰白/"/>
+    <image id="l24p7r" name="继.png" path="/fonts/灰白/"/>
+    <image id="l24p7s" name="解.png" path="/fonts/灰白/"/>
+    <image id="l24p7t" name="散.png" path="/fonts/灰白/"/>
+    <image id="l24p7u" name="下.png" path="/fonts/灰白/"/>
+    <image id="l24p7v" name="斜杠.png" path="/fonts/灰白/"/>
+    <image id="l24p7w" name="续.png" path="/fonts/灰白/"/>
+    <image id="l24p7x" name="炫.png" path="/fonts/灰白/"/>
+    <image id="l24p7y" name="耀.png" path="/fonts/灰白/"/>
+    <image id="l24p7z" name="右括号.png" path="/fonts/灰白/"/>
+    <image id="l24p80" name="左括号.png" path="/fonts/灰白/"/>
+    <image id="l24p81" name="-.png" path="/fonts/灰白/"/>
+    <image id="gg9indu" name="购.png" path="/fonts/灰白/"/>
+    <image id="gg9indw" name="买.png" path="/fonts/灰白/"/>
+    <image id="gg9indx" name="协.png" path="/fonts/灰白/"/>
+    <image id="gg9indz" name="助.png" path="/fonts/灰白/"/>
+    <image id="qszionep" name="部.png" path="/fonts/灰白/"/>
+    <image id="qszioneq" name="除.png" path="/fonts/灰白/"/>
+    <image id="qszioner" name="全.png" path="/fonts/灰白/"/>
+    <image id="qsziones" name="删.png" path="/fonts/灰白/"/>
+    <image id="fx37onf1" name="已.png" path="/fonts/灰白/"/>
+    <image id="8b8konf2" name="玩.png" path="/fonts/灰白/"/>
+    <image id="v0sconf7" name="残.png" path="/fonts/灰白/"/>
+    <image id="v0sconf8" name="付.png" path="/fonts/灰白/"/>
+    <image id="v0sconfa" name="拒.png" path="/fonts/灰白/"/>
+    <image id="v0sconfb" name="绝.png" path="/fonts/灰白/"/>
+    <image id="v0sconfd" name="忍.png" path="/fonts/灰白/"/>
+    <image id="v0sconfe" name="支.png" path="/fonts/灰白/"/>
+    <image id="jbshnea" name="中.png" path="/fonts/灰白/"/>
+    <image id="jbshneb" name="前.png" path="/fonts/灰白/"/>
+    <image id="jbshnec" name="包.png" path="/fonts/灰白/"/>
+    <image id="jbshned" name="可.png" path="/fonts/灰白/"/>
+    <image id="jbshnee" name="已(1).png" path="/fonts/灰白/"/>
+    <image id="jbshnef" name="往.png" path="/fonts/灰白/"/>
+    <image id="jbshneg" name="红.png" path="/fonts/灰白/"/>
+    <image id="jbshneh" name="行.png" path="/fonts/灰白/"/>
+    <image id="jbshnei" name="进.png" path="/fonts/灰白/"/>
+    <image id="ush1onfr" name="礼.png" path="/fonts/灰白/"/>
+    <image id="e5qxonfz" name="换.png" path="/fonts/灰白/"/>
+    <image id="e5qxong0" name="座.png" path="/fonts/灰白/"/>
+    <image id="lykfongb" name="到.png" path="/fonts/灰白/"/>
+    <image id="lykfongc" name="看.png" path="/fonts/灰白/"/>
+    <image id="lykfongd" name="频.png" path="/fonts/灰白/"/>
+    <image id="lykfonge" name="签.png" path="/fonts/灰白/"/>
+    <image id="lykfongf" name="视.png" path="/fonts/灰白/"/>
+    <font id="m1hi33" name="棕.fnt" path="/fonts/棕/" exported="true"/>
+    <image id="iuaenbs" name="！.png" path="/fonts/棕/"/>
+    <image id="iuaenbt" name="，.png" path="/fonts/棕/"/>
+    <image id="ush1onff" name="0.png" path="/fonts/棕/"/>
+    <image id="ush1onfg" name="1.png" path="/fonts/棕/"/>
+    <image id="ush1onfh" name="2.png" path="/fonts/棕/"/>
+    <image id="ush1onfi" name="3.png" path="/fonts/棕/"/>
+    <image id="ush1onfj" name="4.png" path="/fonts/棕/"/>
+    <image id="ush1onfk" name="5.png" path="/fonts/棕/"/>
+    <image id="ush1onfl" name="6.png" path="/fonts/棕/"/>
+    <image id="ush1onfm" name="7.png" path="/fonts/棕/"/>
+    <image id="ush1onfn" name="8.png" path="/fonts/棕/"/>
+    <image id="ush1onfo" name="9.png" path="/fonts/棕/"/>
+    <image id="ush1onfq" name="..png" path="/fonts/棕/"/>
+    <image id="mdyeonhf" name="验.png" path="/fonts/棕/"/>
+    <image id="mdyeonhg" name="需.png" path="/fonts/棕/"/>
+    <image id="mdyeonhh" name="金.png" path="/fonts/棕/"/>
+    <image id="mdyeonhi" name="费.png" path="/fonts/棕/"/>
+    <image id="mdyeonhj" name="设.png" path="/fonts/棕/"/>
+    <image id="mdyeonhk" name="记.png" path="/fonts/棕/"/>
+    <image id="mdyeonhl" name="规.png" path="/fonts/棕/"/>
+    <image id="mdyeonhm" name="要.png" path="/fonts/棕/"/>
+    <image id="mdyeonhn" name="荐.png" path="/fonts/棕/"/>
+    <image id="mdyeonho" name="能.png" path="/fonts/棕/"/>
+    <image id="mdyeonhp" name="置.png" path="/fonts/棕/"/>
+    <image id="mdyeonhq" name="绩.png" path="/fonts/棕/"/>
+    <image id="mdyeonhr" name="红.png" path="/fonts/棕/"/>
+    <image id="mdyeonhs" name="简.png" path="/fonts/棕/"/>
+    <image id="mdyeonht" name="福.png" path="/fonts/棕/"/>
+    <image id="mdyeonhu" name="示.png" path="/fonts/棕/"/>
+    <image id="mdyeonhv" name="登.png" path="/fonts/棕/"/>
+    <image id="mdyeonhw" name="玩.png" path="/fonts/棕/"/>
+    <image id="mdyeonhx" name="游.png" path="/fonts/棕/"/>
+    <image id="mdyeonhy" name="未.png" path="/fonts/棕/"/>
+    <image id="mdyeonhz" name="提.png" path="/fonts/棕/"/>
+    <image id="mdyeoni0" name="推.png" path="/fonts/棕/"/>
+    <image id="mdyeoni1" name="战.png" path="/fonts/棕/"/>
+    <image id="mdyeoni2" name="戏.png" path="/fonts/棕/"/>
+    <image id="mdyeoni3" name="息.png" path="/fonts/棕/"/>
+    <image id="mdyeoni4" name="心.png" path="/fonts/棕/"/>
+    <image id="mdyeoni5" name="录.png" path="/fonts/棕/"/>
+    <image id="mdyeoni6" name="对.png" path="/fonts/棕/"/>
+    <image id="mdyeoni7" name="家.png" path="/fonts/棕/"/>
+    <image id="mdyeoni8" name="好.png" path="/fonts/棕/"/>
+    <image id="mdyeoni9" name="友.png" path="/fonts/棕/"/>
+    <image id="mdyeonia" name="功.png" path="/fonts/棕/"/>
+    <image id="mdyeonib" name="利.png" path="/fonts/棕/"/>
+    <image id="mdyeonic" name="则.png" path="/fonts/棕/"/>
+    <image id="mdyeonid" name="免.png" path="/fonts/棕/"/>
+    <image id="mdyeonie" name="元.png" path="/fonts/棕/"/>
+    <image id="mdyeonif" name="信.png" path="/fonts/棕/"/>
+    <image id="mdyeonig" name="体.png" path="/fonts/棕/"/>
+    <image id="mdyeonih" name="介.png" path="/fonts/棕/"/>
+    <image id="mdyeonii" name="中.png" path="/fonts/棕/"/>
+    <image id="mdyeonip" name="才.png" path="/fonts/棕/"/>
+    <component id="h6bvf" name="IconButton.xml" path="/comp/" exported="true"/>
+    <component id="m1hi34" name="LabelButton.xml" path="/comp/" exported="true"/>
+    <component id="109eo9i" name="TabButton.xml" path="/comp/" exported="true"/>
+    <font id="m7ms1d" name="棕黄.fnt" path="/棕黄/" exported="true"/>
+    <image id="m7ms1e" name="0.png" path="/棕黄/"/>
+    <image id="m7ms1f" name="1.png" path="/棕黄/"/>
+    <image id="m7ms1g" name="2.png" path="/棕黄/"/>
+    <image id="m7ms1h" name="3.png" path="/棕黄/"/>
+    <image id="m7ms1i" name="4.png" path="/棕黄/"/>
+    <image id="m7ms1j" name="5.png" path="/棕黄/"/>
+    <image id="m7ms1k" name="6.png" path="/棕黄/"/>
+    <image id="m7ms1l" name="7.png" path="/棕黄/"/>
+    <image id="m7ms1m" name="8.png" path="/棕黄/"/>
+    <image id="m7ms1n" name="9.png" path="/棕黄/"/>
+    <image id="m7ms1o" name="..png" path="/棕黄/"/>
+    <image id="nz6sioo48" name="万.png" path="/棕黄/"/>
+    <component id="srneioo49" name="EmptyComp.xml" path="/comp/" exported="true"/>
+    <font id="hzavm8u" name="白.fnt" path="/fonts/白/" exported="true"/>
+    <image id="hzavm8v" name="0.png" path="/fonts/白/"/>
+    <image id="hzavm8w" name="1.png" path="/fonts/白/"/>
+    <image id="hzavm8x" name="2.png" path="/fonts/白/"/>
+    <image id="hzavm8y" name="3.png" path="/fonts/白/"/>
+    <image id="hzavm8z" name="4.png" path="/fonts/白/"/>
+    <image id="hzavm90" name="5.png" path="/fonts/白/"/>
+    <image id="hzavm91" name="6.png" path="/fonts/白/"/>
+    <image id="hzavm92" name="7.png" path="/fonts/白/"/>
+    <image id="hzavm93" name="8.png" path="/fonts/白/"/>
+    <image id="hzavm94" name="9.png" path="/fonts/白/"/>
+    <image id="hzavm95" name="点.png" path="/fonts/白/"/>
+    <image id="hzavm96" name="倍.png" path="/fonts/白/"/>
+    <image id="hzavm97" name="称.png" path="/fonts/白/"/>
+    <image id="hzavm98" name="翻.png" path="/fonts/白/"/>
+    <image id="hzavm99" name="贡.png" path="/fonts/白/"/>
+    <image id="hzavm9a" name="献.png" path="/fonts/白/"/>
+    <image id="hzavm9b" name="昵.png" path="/fonts/白/"/>
+    <image id="hzavm9c" name="分.png" path="/fonts/白/"/>
+    <image id="hzavm9d" name="积.png" path="/fonts/白/"/>
+    <image id="hzavm9e" name="按.png" path="/fonts/白/"/>
+    <image id="hzavm9f" name="长.png" path="/fonts/白/"/>
+    <image id="hzavm9g" name="界.png" path="/fonts/白/"/>
+    <image id="hzavm9h" name="面.png" path="/fonts/白/"/>
+    <image id="hzavm9i" name="查.png" path="/fonts/白/"/>
+    <image id="hzavm9j" name="看.png" path="/fonts/白/"/>
+    <image id="hzavm9k" name="牌.png" path="/fonts/白/"/>
+    <image id="hzavm9l" name="桌.png" path="/fonts/白/"/>
+    <image id="hzavm9m" name="(.png" path="/fonts/白/"/>
+    <image id="hzavm9n" name=").png" path="/fonts/白/"/>
+    <image id="hzavm9o" name="本.png" path="/fonts/白/"/>
+    <image id="hzavm9p" name="局.png" path="/fonts/白/"/>
+    <image id="hzavm9q" name="茶.png" path="/fonts/白/"/>
+    <image id="hzavm9r" name="水.png" path="/fonts/白/"/>
+    <image id="hzavm9s" name="费.png" path="/fonts/白/"/>
+    <image id="hzavm9t" name="：.png" path="/fonts/白/"/>
+    <image id="hzavm9u" name="对.png" path="/fonts/白/"/>
+    <image id="hzavm9v" name="万.png" path="/fonts/白/"/>
+    <image id="hzavm9w" name="金.png" path="/fonts/白/"/>
+    <image id="hzavm9x" name="蛋.png" path="/fonts/白/"/>
+    <image id="hzavm9y" name="抽.png" path="/fonts/白/"/>
+    <image id="hzavm9z" name="红.png" path="/fonts/白/"/>
+    <image id="hzavma0" name="包.png" path="/fonts/白/"/>
+    <image id="hzavma1" name="可.png" path="/fonts/白/"/>
+    <image id="hzavma2" name="领.png" path="/fonts/白/"/>
+    <image id="hzavma3" name="取.png" path="/fonts/白/"/>
+    <image id="hzavma4" name="-.png" path="/fonts/白/"/>
+    <image id="hzavma5" name="二.png" path="/fonts/白/"/>
+    <image id="hzavma6" name="三.png" path="/fonts/白/"/>
+    <image id="hzavma7" name="头.png" path="/fonts/白/"/>
+    <image id="hzavma8" name="尾.png" path="/fonts/白/"/>
+    <image id="hzavma9" name="游.png" path="/fonts/白/"/>
+    <image id="hzavmaa" name="大.png" path="/fonts/白/"/>
+    <image id="hzavmab" name="赢.png" path="/fonts/白/"/>
+    <image id="hzavmac" name="家.png" path="/fonts/白/"/>
+    <image id="hzavmad" name="得.png" path="/fonts/白/"/>
+    <image id="hzavmae" name="获.png" path="/fonts/白/"/>
+    <image id="hzavmaf" name="码.png" path="/fonts/白/"/>
+    <image id="hzavmag" name="号.png" path="/fonts/白/"/>
+    <image id="hzavmah" name="运.png" path="/fonts/白/"/>
+    <image id="hzavmai" name="幸.png" path="/fonts/白/"/>
+    <image id="hzavmaj" name="组.png" path="/fonts/白/"/>
+    <image id="rh6m3" name="1底.png" path="/res/alert/" scale="9grid" scale9grid="42,38,1,1"/>
+    <image id="rh6m4" name="1光.png" path="/res/alert/"/>
+    <image id="rh6mb" name="2底.png" path="/res/alert/" scale="9grid" scale9grid="30,30,3,3"/>
+    <image id="rh6m2" name="3光.png" path="/res/alert/"/>
+    <component id="iuaenbr" name="Alert.xml" path="/comp/" exported="true"/>
+    <component id="m1hi2o" name="Frame.xml" path="/comp/" exported="true"/>
+    <image id="m1hi2w" name="x.png" path="/res/alert/"/>
+    <image id="rh6m5" name="抬头.png" path="/res/alert/"/>
+    <image id="rh6m1" name="透明底.png" path="/res/alert/" scale="9grid" scale9grid="32,40,1,1"/>
+    <image id="rh6m1s" name="效果图.png" path="/res/alert/"/>
+    <image id="rh6ma" name="光.png" path="/res/alert/"/>
+    <image id="cmx3onpc" name="包.png" path="/fonts/棕/"/>
+    <image id="cmx3onpd" name="宝.png" path="/fonts/棕/"/>
+    <image id="cmx3onpe" name="背.png" path="/fonts/棕/"/>
+    <image id="cmx3onpg" name="蛋.png" path="/fonts/棕/"/>
+    <image id="cmx3onpw" name="今.png" path="/fonts/棕/"/>
+    <image id="cmx3onpx" name="局.png" path="/fonts/棕/"/>
+    <image id="cmx3onq2" name="日.png" path="/fonts/棕/"/>
+    <image id="cmx3onq5" name="输.png" path="/fonts/棕/"/>
+    <image id="cmx3onqd" name="箱.png" path="/fonts/棕/"/>
+    <image id="cmx3onqg" name="幸.png" path="/fonts/棕/"/>
+    <image id="cmx3onqm" name="运.png" path="/fonts/棕/"/>
+    <image id="m1hi2p" name="黄色1.png" path="/res/button/" exported="true"/>
+    <image id="m1hi2q" name="绿色1.png" path="/res/button/" exported="true"/>
+    <component id="dpen5h" name="Tip.xml" path="/comp/" exported="true"/>
+    <image id="9lzfonfw" name="bang.png" path="/res/tip/"/>
+    <image id="ed49n5m" name="di.png" path="/res/tip/" scale="9grid" scale9grid="126,0,40,39"/>
+    <component id="i23bioogp" name="equip_2201.xml" path="/equipSlot/equip_2201/" exported="true"/>
+    <component id="i23bioogq" name="equip_2601.xml" path="/equipSlot/equip_2201/" exported="true"/>
+    <image id="i23bioogr" name="item_spring_bomb.png" path="/equipSlot/equip_2201/"/>
+    <image id="i23bioogs" name="item_spring_frame.png" path="/equipSlot/equip_2201/"/>
+    <image id="lqgtontl" name="6.png" path="/equipSlot/equip_502009/"/>
+    <image id="lqgtontm" name="6_1.png" path="/equipSlot/equip_502009/"/>
+    <image id="lqgtontn" name="6_2.png" path="/equipSlot/equip_502009/"/>
+    <image id="lqgtonto" name="6_3.png" path="/equipSlot/equip_502009/"/>
+    <component id="lqgtontp" name="equip_502009.xml" path="/equipSlot/equip_502009/" exported="true"/>
+    <image id="lqgtontd" name="equip_502002.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtonte" name="equip_502003.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtontf" name="equip_502005.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtontg" name="equip_502006.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtonth" name="equip_502007.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtonti" name="equip_502008.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtontj" name="equip_502010.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtontk" name="equip_502015.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtontq" name="equip_20202.png" path="/equipSlot/" exported="true"/>
+    <image id="lqgtontr" name="equip_202057.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogh" name="equip_2020521.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogi" name="equip_2020522.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogj" name="equip_2020523.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogk" name="equip_2020527.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogl" name="equip_2020529.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogm" name="equip_2020530.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogn" name="equip_2214.png" path="/equipSlot/" exported="true"/>
+    <image id="i23bioogo" name="equip_2222.png" path="/equipSlot/" exported="true"/>
+    <image id="pa0eioohk" name="蛋.png" path="/fonts/灰白/"/>
+    <image id="pa0eioohl" name="视频.png" path="/fonts/灰白/"/>
+    <image id="pa0eioohm" name="金.png" path="/fonts/灰白/"/>
+    <component id="pa0eiooho" name="BgFrame.xml" path="/comp/" exported="true"/>
+    <image id="pa0eioohr" name="分享.png" path="/fonts/灰白/"/>
+    <image id="pa0eioohs" name="输(1).png" path="/fonts/棕/"/>
+    <sound id="ikqu3" name="btn_menu.mp3" path="/res/" exported="true"/>
+    <image id="m4wyioohy" name="同.png" path="/fonts/灰白/"/>
+    <image id="m4wyioohz" name="意.png" path="/fonts/灰白/"/>
+    <image id="llihiooi0" name="充.png" path="/fonts/白/"/>
+    <image id="llihiooi1" name="次.png" path="/fonts/白/"/>
+    <image id="llihiooi2" name="多.png" path="/fonts/白/"/>
+    <image id="llihiooi3" name="每.png" path="/fonts/白/"/>
+    <image id="llihiooi4" name="日.png" path="/fonts/白/"/>
+    <image id="llihiooi5" name="首.png" path="/fonts/白/"/>
+    <image id="llihiooi6" name="送.png" path="/fonts/白/"/>
+    <image id="l4noiooi7" name="免.png" path="/fonts/灰白/"/>
+    <image id="l4noiooi8" name="费.png" path="/fonts/灰白/"/>
+    <image id="fs4fiooic" name="equip_2020514.png" path="/equipSlot/" exported="true"/>
+    <image id="opxfiooid" name="clickTip.png" path="/res/" exported="true"/>
+    <image id="wqpfiooie" name="策.png" path="/fonts/棕/"/>
+    <image id="wqpfiooif" name="户.png" path="/fonts/棕/"/>
+    <image id="wqpfiooig" name="私.png" path="/fonts/棕/"/>
+    <image id="wqpfiooih" name="协.png" path="/fonts/棕/"/>
+    <image id="wqpfiooii" name="议.png" path="/fonts/棕/"/>
+    <image id="wqpfiooij" name="隐.png" path="/fonts/棕/"/>
+    <image id="wqpfiooik" name="用.png" path="/fonts/棕/"/>
+    <image id="wqpfiooil" name="政.png" path="/fonts/棕/"/>
+    <component id="u6qliooim" name="TabButton1.xml" path="/comp/" exported="true"/>
+    <image id="ydgbiooin" name="equip_23109.png" path="/equipSlot/" exported="true"/>
+    <image id="9imxiooip" name="圆角矩形 14.png" path="/res/"/>
+    <image id="9imxiooiq" name="圆角矩形 14@2x.png" path="/res/" exported="true"/>
+    <image id="9imxiooir" name="圆角矩形 14@3x.png" path="/res/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

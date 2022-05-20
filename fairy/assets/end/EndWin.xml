@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,1334" designImage="ui://eqhf79fh9imx1" designImageOffsetX="-22" designImageOffsetY="-297" designImageLayer="1">
+  <displayList>
+    <image id="n5_9imx" name="n5" src="9imx7" fileName="img/组 50@2x.png" xy="29,153"/>
+    <component id="n1_9imx" name="btnStart" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="363,754" size="234,90">
+      <Button icon="ui://eqhf79fh9imxd"/>
+    </component>
+    <component id="n2_9imx" name="btnAgain" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="108,754" size="234,90">
+      <Button icon="ui://eqhf79fh9imx4"/>
+    </component>
+    <component id="n3_9imx" name="btnStart" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="106,868" size="494,90">
+      <Button icon="ui://eqhf79fh9imxa"/>
+    </component>
+    <image id="n4_9imx" name="n4" src="9imxg" fileName="img/图层 529@2x.png" xy="0,3"/>
+    <text id="n6_9imx" name="txtScore" xy="249,359" size="209,129" fontSize="70" color="#663300" align="center" vAlign="middle" autoSize="none" bold="true" text="98分"/>
+    <text id="n7_9imx" name="txtMaxScore" xy="179,471" size="392,88" fontSize="40" color="#663300" align="center" vAlign="middle" autoSize="none" text="历史最好成绩:99分"/>
+    <text id="n8_9imx" name="txtTip" xy="154,627" size="392,88" fontSize="40" align="center" vAlign="middle" autoSize="none" text="排名保持在前50名！"/>
+  </displayList>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="640,868">
+  <displayList>
+    <image id="n0_9imx" name="n0" src="9imxg" fileName="img/组 65@2x.png" xy="0,0"/>
+    <component id="n1_9imx" name="btnClose" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="572,32" size="38,39">
+      <Button icon="ui://zmhnw1c69imxiooiq"/>
+    </component>
+    <text id="n2_9imx" name="n2" xy="19,155" size="601,654" fontSize="32" autoSize="none" text="欢乐一“夏”，“霄”遥自在：&#xA; &#xA;这个夏天，和瞧贤开启一场奇遇之旅！&#xA;元气卡哇、千姿百态，每次“连”动都直击心巴。&#xA;畅玩体验成就人生赢家，快来体验霄霄乐，沉浸式感受萌动心扉的梦幻冒险！&#xA;活动规则：&#xA;移动相邻瞧贤小像，至少4个连续相同小像在一条直线上（横向或纵向），则完成消除。规定时间内，消除的越多，则积分越多，赶紧体验吧！"/>
+  </displayList>
+</component>
