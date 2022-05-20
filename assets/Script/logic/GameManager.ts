@@ -488,6 +488,7 @@ export class GameManager {
         let xList = [];
         for (let k in boomList) {
             let p = boomList[k];
+            if (xList[p.x] == undefined) xList[p.x] = 0;
             xList[p.x]++;
         }
         for (let i = 0; i < xList.length; i++) {
@@ -498,6 +499,7 @@ export class GameManager {
         let yList = [];
         for (let k in boomList) {
             let p = boomList[k];
+            if (yList[p.y] == undefined) yList[p.x] = 0;
             yList[p.y]++;
         }
         for (let i = 0; i < yList.length; i++) {
@@ -673,10 +675,10 @@ export class GameManager {
                         // else
                         // mvc.send(Notifitions.ElimPollution, point);
                     }
+                    gridList.push(this._gridMap[p.x][p.y]);
+                    this._gridMap[p.x][p.y] = null;
                 }
             }
-            gridList.push(this._gridMap[p.x][p.y]);
-            this._gridMap[p.y, p.x] = null;
         }
         return gridList;
         // mvc.send(Notifitions.Eliminate, boomList);
@@ -887,40 +889,23 @@ export class GameManager {
         return true;
     }
     createNewGrid() {
-        // //生成球
-        // let createCount = this.getCreateCount();
-        // //筛选空格子
-        // let pList = [];
-        // for (let i = 0; i < this._gridMap.length; i++) {
-        //     p = this.indexToPoint(i);
-        //     if (this._gridMap[p.y, p.x] == null && this.isMap(p)) {
-        //         pList.push(p);
-        //     }
-        // }
-        // if (pList.length > 1) {
-        //     if (pList.length > createCount) {
-        //         var list = Util.getRandomWithoutRep(0, pList.Count, createCount).ToArray();
-        //         for (let i = 0; i < list.length; i++) {
-        //             var p = pList[list[i]];
-        //             if (let i == 0 && this._myScore >= this.IceCubeCreateNeedScore && this.isCreateIceCube()) {
-        //                 this.createGrid(p.x, p.y, -1, GridType.IceCube);
-        //             }
-        //             else
-        //                 this.createGrid(p.x, p.y, Util.getRandom(0, SkinManager.COLOR_COUNT));
-        //         }
-        //     }
-        //     else {
-        //         var pArr = pList.ToArray();
-        //         for (i = 0; i < pArr.length; i++) {
-        //             var p = pArr[i];
-        //             if (i == 0 && this._myScore >= this.IceCubeCreateNeedScore && this.isCreateIceCube()) {
-        //                 this.createGrid(p.x, p.y, -1, GridType.IceCube);
-        //             }
-        //             else
-        //                 this.createGrid(p.x, p.y, Util.getRandom(0, SkinManager.COLOR_COUNT));
-        //         }
-        //     }
-        // }
+        //生成球
+        let createCount = this.getCreateCount();
+        //筛选空格子
+        let pList = [];
+        for (let i = 0; i < this._gridMap.length; i++) {
+            p = this.indexToPoint(i);
+            if (this._gridMap[p.y, p.x] == null && this.isMap(p)) {
+                pList.push(p);
+            }
+        }
+        if (pList.length > 1) {
+            var pArr = pList;
+            for (let i = 0; i < pArr.length; i++) {
+                var p = pArr[i];
+                this.createGrid(p.x, p.y);
+            }
+        }
     }
 
     private isCreateIceCube() {
@@ -1049,10 +1034,10 @@ export class GameManager {
 
     move(curIndex, tarIndex) {
         let curX = curIndex % GameDef.GRID_WIDTH;
-        let curY = parseInt(curIndex / GameDef.GRID_HEIGHT + '');
+        let curY = parseInt(curIndex / GameDef.GRID_WIDTH + '');
 
         let tarX = tarIndex % GameDef.GRID_WIDTH;
-        let tarY = parseInt(tarIndex / GameDef.GRID_HEIGHT + '');
+        let tarY = parseInt(tarIndex / GameDef.GRID_WIDTH + '');
 
         let grid = this._gridMap[curX][curY];
         this._gridMap[curX][curY] = this._gridMap[tarX][tarY];

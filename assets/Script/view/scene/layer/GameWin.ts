@@ -53,11 +53,11 @@ export class GameWin extends k7.AppWindow {
 
         let sel = this.list.getChildIndex(item);
 
-        if (this.curSel != undefined) {
+        if (this.curSel != undefined && this.curSel != sel) {
             //不是相邻点 重置原来选新点
+
             const curItem = this.list.getChildAt(this.curSel).asCom;
             curItem.getController('sel').selectedIndex = 0;
-
             if (GameManager.inst.canClick(this.curSel, sel)) {
                 //相邻点 开启移动，移动完成开始检测
                 this.move(this.curSel, sel);
@@ -142,7 +142,8 @@ export class GameWin extends k7.AppWindow {
     onEvent(eventName: string, params: any) {
         switch (eventName) {
             case Notifitions.CreateNewGrid:
-                // this.create
+                const p = GameManager.inst.pointToIndex(params);
+                this.itemRenderer(p, this.list.getChildAt(p));
                 break;
             case Notifitions.CheckAndMoveEnd:
                 this.onCheckAndMoveEnd(params);
@@ -154,17 +155,22 @@ export class GameWin extends k7.AppWindow {
         if (tempBoomList.length > 0) {
             for (let f in tempBoomList) {
                 const foo = tempBoomList[f];
-                const comp = this.list.getChildAt(GameManager.inst.pointToIndex(foo));
-                cc.tween(comp)
-                    .sequence(
-                        cc.tween().to(0.2, { scaleX: 1.2, scaleY: 1.2 }),
-                        cc.tween().to(0.5, { scaleX: 0, scaleY: 0 }),
-                    )
-                    .call(() => {
+                for (let m in foo) {
+                    const p = GameManager.inst.pointToIndex(foo[m]);
+                    console.log('查看', p);
+                    const comp = this.list.getChildAt(p);
+                    cc.tween(comp)
+                        .sequence(
+                            cc.tween().to(0.2, { scaleX: 1.2, scaleY: 1.2 }),
+                            cc.tween().to(0.5, { scaleX: 0, scaleY: 0 }),
+                        )
+                        .call(() => {
 
-                    })
-                    .start();
+                        })
+                        .start();
+                }
             }
+            GameManager.inst.createNewGrid();
         } else
             this.canMove = true;
     }
