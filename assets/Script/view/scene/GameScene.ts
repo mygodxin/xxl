@@ -1,4 +1,4 @@
-import { GameWin } from "../view/GameWin";
+import { GameWin } from "./layer/GameWin";
 
 export class GameScene extends k7.AppScene {
     constructor() {

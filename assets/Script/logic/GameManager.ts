@@ -409,202 +409,7 @@ export class GameManager {
         if (startPoints.length > 0) return true;
         return false;
     }
-    public move(curIndex, tarIndex) {
-        let curX = curIndex % GameDef.GRID_WIDTH;
-        let curY = curIndex / GameDef.GRID_HEIGHT;
 
-        let tarX = tarIndex % GameDef.GRID_WIDTH;
-        let tarY = tarIndex / GameDef.GRID_HEIGHT;
-
-        if (curX != tarX && curY != tarY) return;
-
-        let startPoints;
-        let endPoints = [];
-        if (curX == tarX) {//x轴方向
-            if (tarY < curY) {//上
-                //查找障碍
-                let grid;
-                let line = [];
-                let obstacleIndex = tarY;
-                //获取需要移动的点
-                for (let i = curY; i > tarY; i--) {
-                    grid = this._gridMap[curX][i];
-                    var point = new cc.Vec2(curX, i);
-                    if (this.isBarrier(grid) || !this.isMap(point)) {
-                        line.length = 0;
-                        break;
-                    }
-                    if (grid != null) {
-                        line.push(new cc.Vec2(curX, i));
-                    }
-                    else {
-                        obstacleIndex = i;
-                        break;
-                    }
-                }
-                //获取障碍点
-                for (let i = obstacleIndex; i >= tarY; i--) {
-                    grid = this._gridMap[curX][i];
-                    var point = new cc.Vec2(curX, i);
-                    if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
-                        break;
-                    }
-                    else {
-                        obstacleIndex = i;
-                    }
-                }
-                //开始移动点
-                let p;
-                let startPoints = line;
-                for (let i = startPoints.length - 1; i >= 0; i--) {
-                    p = startPoints[i];
-                    endPoints.push(new cc.Vec2(p.x, obstacleIndex));
-                    this._gridMap[p.x][obstacleIndex] = this._gridMap[p.x][p.y];
-                    this._gridMap[p.y, p.x] = null;
-                    obstacleIndex++;
-                }
-            }
-            else {//下
-                //查找障碍
-                let grid;
-                let line = [];
-                let obstacleIndex = tarY;
-                //获取需要移动的点
-                for (let i = curY; i < tarY; i++) {
-                    grid = this._gridMap[curX][i];
-                    var point = new cc.Vec2(curX, i);
-                    if (this.isBarrier(grid) || !this.isMap(point)) {
-                        line.length = 0;
-                        break;
-                    }
-                    if (grid != null) {
-                        line.push(new cc.Vec2(curX, i));
-                    }
-                    else {
-                        obstacleIndex = i;
-                        break;
-                    }
-                }
-                //获取障碍点
-                for (let i = obstacleIndex; i <= tarY; i++) {
-                    grid = this._gridMap[curX][i];
-                    var point = new cc.Vec2(curX, i);
-                    if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
-                        break;
-                    }
-                    else {
-                        obstacleIndex = i;
-                    }
-                }
-                //开始移动点
-                let p;
-                let startPoints = line;
-                for (let i = startPoints.length - 1; i >= 0; i--) {
-                    p = startPoints[i];
-                    endPoints.push(new cc.Vec2(p.x, obstacleIndex));
-                    this._gridMap[p.x][obstacleIndex] = this._gridMap[p.x][p.y];
-                    this._gridMap[p.y, p.x] = null;
-                    obstacleIndex--;
-                }
-            }
-        }
-        else {//y轴方向
-            if (tarX < curX) {//左
-                //查找障碍
-                let grid;
-                let line = [];
-                let obstacleIndex = tarX;
-                //获取需要移动的点
-                for (let i = curX; i > tarX; i--) {
-                    grid = this._gridMap[i][curY];
-                    var point = new cc.Vec2(i, curY);
-                    if (this.isBarrier(grid) || !this.isMap(point)) {
-                        line.length;
-                        break;
-                    }
-                    if (grid != null) {
-                        line.push(new cc.Vec2(i, curY));
-                    }
-                    else {
-                        obstacleIndex = i;
-                        break;
-                    }
-                }
-                //获取障碍点
-                for (let i = obstacleIndex; i >= tarX; i--) {
-                    grid = this._gridMap[i][curY];
-                    var point = new cc.Vec2(i, curY);
-                    if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
-                        break;
-                    }
-                    else {
-                        obstacleIndex = i;
-                    }
-                }
-                //开始移动点
-                let p;
-                let startPoints = line;
-                for (let i = startPoints.length - 1; i >= 0; i--) {
-                    p = startPoints[i];
-                    endPoints.push(new cc.Vec2(obstacleIndex, p.y));
-                    this._gridMap[p.y, obstacleIndex] = this._gridMap[p.y, p.x];
-                    this._gridMap[p.y, p.x] = null;
-                    obstacleIndex++;
-                }
-            }
-            else {//右
-                //查找障碍
-                let grid;
-                let line = [];
-                let obstacleIndex = tarX;
-                //获取需要移动的点
-                for (let i = curX; i < tarX; i++) {
-                    grid = this._gridMap[i][curY];
-                    var point = new cc.Vec2(i, curY);
-                    if (this.isBarrier(grid) || !this.isMap(point)) {
-                        line.length = 0;
-                        break;
-                    }
-                    if (grid != null) {
-                        line.push(new cc.Vec2(i, curY));
-                    }
-                    else {
-                        obstacleIndex = i;
-                        break;
-                    }
-                }
-                //获取障碍点
-                for (let i = obstacleIndex; i <= tarX; i++) {
-                    grid = this._gridMap[i][curY];
-                    var point = new cc.Vec2(i, curY);
-                    if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
-                        break;
-                    }
-                    else {
-                        obstacleIndex = i;
-                    }
-                }
-                //开始移动点
-                let p;
-                let startPoints = line;
-                for (let i = startPoints.length - 1; i >= 0; i--) {
-                    p = startPoints[i];
-                    endPoints.push(new cc.Vec2(obstacleIndex, p.y));
-                    this._gridMap[p.y, obstacleIndex] = this._gridMap[p.y, p.x];
-                    this._gridMap[p.y, p.x] = null;
-                    obstacleIndex--;
-                }
-            }
-        }
-        let moveList = [];
-        var endArr = endPoints;
-        // Array.Reverse(endArr);
-        moveList.push("end", endArr);
-        moveList.push("start", startPoints);
-        this.isCreateNew = true;
-        this.tempScore = 0;
-        // mvc.send(Notifitions.MoveEnd, moveList);
-    }
     private checkObstacleGrid(curIndex, tarIndex) {
 
     }
@@ -652,9 +457,12 @@ export class GameManager {
                 var boomList = sameList;
                 //消除并加分
                 if (boomList.length >= GameDef.CAN_ELIMINATE) {
-                    tempGridList.push(...this.removeBoomList(boomList));
-                    score += (boomList.length - 1);
-                    tempBoomList.push(boomList);
+                    //检测数组里是否有横向或者纵向超过4个的
+                    if (this.checkDirNum(boomList)) {
+                        tempGridList.push(...this.removeBoomList(boomList));
+                        score += (boomList.length - 1);
+                        tempBoomList.push(boomList);
+                    }
                 }
             }
             if (score > 0) {
@@ -674,6 +482,30 @@ export class GameManager {
         //     this.pushScore(this.tempScore);
         cc.log("触发消除检查=========", tempBoomList);
         mvc.send(Notifitions.CheckAndMoveEnd, tempBoomList);
+    }
+
+    checkDirNum(boomList: cc.Vec2[]) {
+        let xList = [];
+        for (let k in boomList) {
+            let p = boomList[k];
+            xList[p.x]++;
+        }
+        for (let i = 0; i < xList.length; i++) {
+            if (xList[i] >= GameDef.CAN_ELIMINATE) {
+                return true;
+            }
+        }
+        let yList = [];
+        for (let k in boomList) {
+            let p = boomList[k];
+            yList[p.y]++;
+        }
+        for (let i = 0; i < yList.length; i++) {
+            if (yList[i] >= GameDef.CAN_ELIMINATE) {
+                return true;
+            }
+        }
+        return false;
     }
     getCombo(boomArr: Grid[]) {
         let combo = 0;
@@ -1214,4 +1046,214 @@ export class GameManager {
         // mvc.send(Notifitions.InitMap);
         return true;
     }
+
+    move(curIndex, tarIndex) {
+        let curX = curIndex % GameDef.GRID_WIDTH;
+        let curY = parseInt(curIndex / GameDef.GRID_HEIGHT + '');
+
+        let tarX = tarIndex % GameDef.GRID_WIDTH;
+        let tarY = parseInt(tarIndex / GameDef.GRID_HEIGHT + '');
+
+        let grid = this._gridMap[curX][curY];
+        this._gridMap[curX][curY] = this._gridMap[tarX][tarY];
+        this._gridMap[tarX][tarY] = grid;
+        console.log('交换', curX, curY, tarX, tarY);
+    }
+
+    // public move(curIndex, tarIndex) {
+    //     let curX = curIndex % GameDef.GRID_WIDTH;
+    //     let curY = curIndex / GameDef.GRID_HEIGHT;
+
+    //     let tarX = tarIndex % GameDef.GRID_WIDTH;
+    //     let tarY = tarIndex / GameDef.GRID_HEIGHT;
+
+    //     if (curX != tarX && curY != tarY) return;
+
+    //     let startPoints;
+    //     let endPoints = [];
+    //     if (curX == tarX) {//x轴方向
+    //         if (tarY < curY) {//上
+    //             //查找障碍
+    //             let grid;
+    //             let line = [];
+    //             let obstacleIndex = tarY;
+    //             //获取需要移动的点
+    //             for (let i = curY; i > tarY; i--) {
+    //                 grid = this._gridMap[curX][i];
+    //                 var point = new cc.Vec2(curX, i);
+    //                 if (this.isBarrier(grid) || !this.isMap(point)) {
+    //                     line.length = 0;
+    //                     break;
+    //                 }
+    //                 if (grid != null) {
+    //                     line.push(new cc.Vec2(curX, i));
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                     break;
+    //                 }
+    //             }
+    //             //获取障碍点
+    //             for (let i = obstacleIndex; i >= tarY; i--) {
+    //                 grid = this._gridMap[curX][i];
+    //                 var point = new cc.Vec2(curX, i);
+    //                 if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
+    //                     break;
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                 }
+    //             }
+    //             //开始移动点
+    //             let p;
+    //             let startPoints = line;
+    //             for (let i = startPoints.length - 1; i >= 0; i--) {
+    //                 p = startPoints[i];
+    //                 endPoints.push(new cc.Vec2(p.x, obstacleIndex));
+    //                 this._gridMap[p.x][obstacleIndex] = this._gridMap[p.x][p.y];
+    //                 this._gridMap[p.y, p.x] = null;
+    //                 obstacleIndex++;
+    //             }
+    //         }
+    //         else {//下
+    //             //查找障碍
+    //             let grid;
+    //             let line = [];
+    //             let obstacleIndex = tarY;
+    //             //获取需要移动的点
+    //             for (let i = curY; i < tarY; i++) {
+    //                 grid = this._gridMap[curX][i];
+    //                 var point = new cc.Vec2(curX, i);
+    //                 if (this.isBarrier(grid) || !this.isMap(point)) {
+    //                     line.length = 0;
+    //                     break;
+    //                 }
+    //                 if (grid != null) {
+    //                     line.push(new cc.Vec2(curX, i));
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                     break;
+    //                 }
+    //             }
+    //             //获取障碍点
+    //             for (let i = obstacleIndex; i <= tarY; i++) {
+    //                 grid = this._gridMap[curX][i];
+    //                 var point = new cc.Vec2(curX, i);
+    //                 if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
+    //                     break;
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                 }
+    //             }
+    //             //开始移动点
+    //             let p;
+    //             let startPoints = line;
+    //             for (let i = startPoints.length - 1; i >= 0; i--) {
+    //                 p = startPoints[i];
+    //                 endPoints.push(new cc.Vec2(p.x, obstacleIndex));
+    //                 this._gridMap[p.x][obstacleIndex] = this._gridMap[p.x][p.y];
+    //                 this._gridMap[p.y, p.x] = null;
+    //                 obstacleIndex--;
+    //             }
+    //         }
+    //     }
+    //     else {//y轴方向
+    //         if (tarX < curX) {//左
+    //             //查找障碍
+    //             let grid;
+    //             let line = [];
+    //             let obstacleIndex = tarX;
+    //             //获取需要移动的点
+    //             for (let i = curX; i > tarX; i--) {
+    //                 grid = this._gridMap[i][curY];
+    //                 var point = new cc.Vec2(i, curY);
+    //                 if (this.isBarrier(grid) || !this.isMap(point)) {
+    //                     line.length;
+    //                     break;
+    //                 }
+    //                 if (grid != null) {
+    //                     line.push(new cc.Vec2(i, curY));
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                     break;
+    //                 }
+    //             }
+    //             //获取障碍点
+    //             for (let i = obstacleIndex; i >= tarX; i--) {
+    //                 grid = this._gridMap[i][curY];
+    //                 var point = new cc.Vec2(i, curY);
+    //                 if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
+    //                     break;
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                 }
+    //             }
+    //             //开始移动点
+    //             let p;
+    //             let startPoints = line;
+    //             for (let i = startPoints.length - 1; i >= 0; i--) {
+    //                 p = startPoints[i];
+    //                 endPoints.push(new cc.Vec2(obstacleIndex, p.y));
+    //                 this._gridMap[p.y, obstacleIndex] = this._gridMap[p.y, p.x];
+    //                 this._gridMap[p.y, p.x] = null;
+    //                 obstacleIndex++;
+    //             }
+    //         }
+    //         else {//右
+    //             //查找障碍
+    //             let grid;
+    //             let line = [];
+    //             let obstacleIndex = tarX;
+    //             //获取需要移动的点
+    //             for (let i = curX; i < tarX; i++) {
+    //                 grid = this._gridMap[i][curY];
+    //                 var point = new cc.Vec2(i, curY);
+    //                 if (this.isBarrier(grid) || !this.isMap(point)) {
+    //                     line.length = 0;
+    //                     break;
+    //                 }
+    //                 if (grid != null) {
+    //                     line.push(new cc.Vec2(i, curY));
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                     break;
+    //                 }
+    //             }
+    //             //获取障碍点
+    //             for (let i = obstacleIndex; i <= tarX; i++) {
+    //                 grid = this._gridMap[i][curY];
+    //                 var point = new cc.Vec2(i, curY);
+    //                 if (grid != null || this.isBarrier(grid) || !this.isMap(point)) {
+    //                     break;
+    //                 }
+    //                 else {
+    //                     obstacleIndex = i;
+    //                 }
+    //             }
+    //             //开始移动点
+    //             let p;
+    //             let startPoints = line;
+    //             for (let i = startPoints.length - 1; i >= 0; i--) {
+    //                 p = startPoints[i];
+    //                 endPoints.push(new cc.Vec2(obstacleIndex, p.y));
+    //                 this._gridMap[p.y, obstacleIndex] = this._gridMap[p.y, p.x];
+    //                 this._gridMap[p.y, p.x] = null;
+    //                 obstacleIndex--;
+    //             }
+    //         }
+    //     }
+    //     let moveList = [];
+    //     var endArr = endPoints;
+    //     // Array.Reverse(endArr);
+    //     moveList.push("end", endArr);
+    //     moveList.push("start", startPoints);
+    //     this.isCreateNew = true;
+    //     this.tempScore = 0;
+    //     // mvc.send(Notifitions.MoveEnd, moveList);
+    // }
 }

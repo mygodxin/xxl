@@ -340,9 +340,9 @@ window.k7 = window.k7 || {};
                     _this.addUISource(lib);
                 }
             }
-            if (!sources.length) {
-                _this.addUISource(k7.floader.get(pack));
-            }
+            // if (!sources.length) {
+            //     _this.addUISource(k7.floader.get(pack));
+            // }
             _this.modal = true;
             _this.isCenter = true;
             _this.initConfig();

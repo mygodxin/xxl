@@ -1,9 +1,9 @@
-import { StorageDef } from "../../define/StorageDef";
-import { GameManager } from "../../logic/GameManager";
-import { StartScene } from "../scene/StartScene";
+import { StorageDef } from "../../../define/StorageDef";
+import { GameManager } from "../../../logic/GameManager";
+import { StartScene } from "../StartScene";
 import { GameWin } from "./GameWin";
-import { SubValidKey, WxRankProducer } from "./OpenDataContext";
-import { RankWin } from "./RankWin";
+import { SubValidKey, WxRankProducer } from "../../view/OpenDataContext";
+import { RankWin } from "../../view/RankWin";
 
 export class EndWin extends k7.AppWindow {
     btnAgain: GButton;
