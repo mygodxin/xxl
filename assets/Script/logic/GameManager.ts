@@ -680,7 +680,7 @@ export class GameManager {
                     }
                     gridList.push(this._gridMap[p.x][p.y]);
                     this._gridMap[p.x][p.y] = null;
-                    console.log('清空格子', p.x, p.y);
+                    // console.log('清空格子', p.x, p.y);
                 }
             }
         }

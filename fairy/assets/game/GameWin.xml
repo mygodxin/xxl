@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1334" designImageLayer="1">
   <displayList>
-    <image id="n1_9imx" name="n1" src="wq8hb" fileName="img/消消乐@2x.png" pkg="59b9xyju" xy="-6,-206" visible="false"/>
+    <image id="n1_9imx" name="n1" src="wq8hb" fileName="img/消消乐@2x.png" pkg="59b9xyju" xy="-6,-145" visible="false"/>
     <image id="n8_9imx" name="n8" src="9imxh" fileName="img/组 47@2x.png" xy="179,190">
       <relation target="" sidePair="top-top"/>
     </image>
@@ -24,5 +24,6 @@
     </list>
     <text id="n12_9imx" name="txtGold" xy="165,39" size="134,54" fontSize="40" color="#ffffff" bold="true" text="90金币"/>
     <text id="n13_9imx" name="txtTime" xy="499,37" size="93,54" fontSize="40" color="#ffffff" vAlign="middle" bold="true" text="48秒"/>
+    <component id="n14_8d43" name="empty" src="srneioo49" fileName="comp/EmptyComp.xml" pkg="zmhnw1c6" xy="0,0" size="100,100"/>
   </displayList>
 </component>

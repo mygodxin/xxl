@@ -8,10 +8,12 @@ export class GameWin extends k7.AppWindow {
     txtGold: GTextField;
     txtTime: GTextField;
     list: GList;
+    emptyComp: GComponent;
     gridMap
     debug = false;
     private time: number;
-    private readonly maxTime: number = 10;
+    private readonly maxTime: number = 90;
+    private compPool: cc.NodePool = new cc.NodePool();
 
     constructor() {
         super('GameWin', 'game');
@@ -47,6 +49,7 @@ export class GameWin extends k7.AppWindow {
     bindChild() {
         this.txtGold = this.getTextField('txtGold');
         this.txtTime = this.getTextField('txtTime');
+        this.emptyComp = this.getComp('empty');
         this.list = this.getList('list');
         this.list.itemRenderer = this.itemRenderer.bind(this);
         this.list.on(fgui.Event.CLICK_ITEM, this.clickItem, this);
@@ -65,6 +68,7 @@ export class GameWin extends k7.AppWindow {
         obj.asCom.getChild('title').asTextField.text = this.debug ? data.color : '';
         obj.asCom.visible = true;
         obj.asCom.scaleX = obj.asCom.scaleY = 1;
+        obj.asCom.getController('sel').selectedIndex = 0;
         // console.log('生成新点', obj.asCom, index);
         // target.getController("show").selectedIndex = data[index] != "" ? 1 : 0;
     }
@@ -73,6 +77,7 @@ export class GameWin extends k7.AppWindow {
     readonly MAX_SEL: number = 2;
     curSel;
     canMove = true;
+    canEliminate = [];
     private clickItem(item: GComponent): void {
         if (!this.canMove) return;
 
@@ -85,6 +90,7 @@ export class GameWin extends k7.AppWindow {
             curItem.getController('sel').selectedIndex = 0;
             if (GameManager.inst.canClick(this.curSel, sel)) {
                 //相邻点 开启移动，移动完成开始检测
+                this.canEliminate = [this.curSel, sel];
                 this.move(this.curSel, sel);
                 this.curSel = undefined;
             } else {
@@ -124,7 +130,7 @@ export class GameWin extends k7.AppWindow {
         curFlyItem.getChild('title').asTextField.text = '';
         curFlyItem.x = left + curItem.x;
         curFlyItem.y = top + curItem.y;
-        this.addChild(curFlyItem);
+        this.emptyComp.addChild(curFlyItem);
         lastItem.getChild('icon').asLoader.url = curUrl;
         lastItem.getChild('title').asTextField.text = this.debug ? curColor : '';
 
@@ -134,7 +140,7 @@ export class GameWin extends k7.AppWindow {
         lastFlyItem.getChild('title').asTextField.text = '';
         lastFlyItem.x = left + lastItem.x;
         lastFlyItem.y = top + lastItem.y;
-        this.addChild(lastFlyItem);
+        this.emptyComp.addChild(lastFlyItem);
         curItem.getChild('icon').asLoader.url = lastUrl;
         curItem.getChild('title').asTextField.text = this.debug ? lastColor : '';
 
@@ -172,6 +178,7 @@ export class GameWin extends k7.AppWindow {
         this.updateScore();
         this.countdown();
         this.canMove = true;
+        this.emptyComp.removeChildren();
     }
 
     updateScore() {
@@ -211,7 +218,7 @@ export class GameWin extends k7.AppWindow {
         flyComp.x = left + comp.x + flyComp.width / 2;
         flyComp.y = -this.height / 2//top + comp.y + flyComp.height / 2;
         flyComp.setPivot(0.5, 0.5, true);
-        this.addChild(flyComp);
+        this.emptyComp.addChild(flyComp);
 
         cc.tween(flyComp)
             .to(0.5, { y: top + comp.y + flyComp.height / 2 })
@@ -231,7 +238,7 @@ export class GameWin extends k7.AppWindow {
                 const foo = tempBoomList[f];
                 for (let m in foo) {
                     const p = GameManager.inst.pointToIndex(foo[m]);
-                    console.log('消除点', p);
+                    // console.log('消除点', p);
                     const comp = this.list.getChildAt(p).asCom;
 
                     const left = this.list.x + this.list.margin.left;
@@ -244,13 +251,13 @@ export class GameWin extends k7.AppWindow {
                     hideComp.x = left + comp.x + hideComp.width / 2;
                     hideComp.y = top + comp.y + hideComp.height / 2;
                     hideComp.setPivot(0.5, 0.5, true);
-                    this.addChild(hideComp);
+                    this.emptyComp.addChild(hideComp);
 
                     comp.getChild('icon').asLoader.url = '';
                     cc.tween(hideComp)
                         .sequence(
                             cc.tween().to(0.2, { scaleX: 1.2, scaleY: 1.2 }),
-                            cc.tween().to(0.5, { scaleX: 0, scaleY: 0 }),
+                            cc.tween().to(0.3, { scaleX: 0, scaleY: 0 }),
                         )
                         .call(() => {
                             hideComp.removeFromParent();
@@ -259,19 +266,27 @@ export class GameWin extends k7.AppWindow {
                         .start();
                 }
             }
-
+            // setTimeout(() => {
+            this.canEliminate.length = 0;
             if (!GameManager.inst.neaton()) {
                 console.log('不需要整理')
                 setTimeout(() => {
                     GameManager.inst.createNewGrid();
                     this.canMove = true;
-                }, 300);
+                }, 100);
             }
+            // }, 500);
         } else {
-            setTimeout(() => {
-                GameManager.inst.createNewGrid();
-                this.canMove = true;
-            }, 300);
+            if (this.canEliminate.length) {
+                this.move(this.canEliminate[0], this.canEliminate[1]);
+                this.canEliminate.length = 0;
+            } else {
+                setTimeout(() => {
+                    GameManager.inst.createNewGrid();
+                    this.canMove = true;
+                }, 100);
+            }
+            this.canMove = true;
         }
     }
 
