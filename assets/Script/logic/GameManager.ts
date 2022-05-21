@@ -77,7 +77,7 @@ export class GameManager {
     }
 
     getColorWithPos(x, y) {
-        let all = [0, 1, 2, 3];
+        let all = [0, 1, 2, 3, 4];
         let random = Util.getRandom(0, all.length);
         if (x == 0 && y == 0) {
             return all[random];
@@ -104,8 +104,8 @@ export class GameManager {
 
         //剩余颜色中随机一个
         random = Util.getRandom(0, tar.length);
-        console.log('最终颜色', x + y * GameDef.GRID_WIDTH, round, tar[random], tar, random);
-        return tar[random];
+        // console.log('最终颜色', x + y * GameDef.GRID_WIDTH, round, tar[random], tar, random);
+        return tar.length ? tar[random] : 0;
     }
 
     getCanEliminatePoint(x, y) {
@@ -480,7 +480,8 @@ export class GameManager {
         }
         // if (!this.isCreateNew)
         //     this.pushScore(this.tempScore);
-        cc.log("触发消除检查=========", tempBoomList);
+        if (tempBoomList.length)
+            cc.log("触发消除检查=========", tempBoomList);
         mvc.send(Notifitions.CheckAndMoveEnd, tempBoomList);
     }
 
@@ -578,7 +579,7 @@ export class GameManager {
                 continue;
             if (curGrid.color == tempGird.color) {
                 this.FillSameItemsList(sameList, tempItemList[i]);
-                console.log('列表', current.x, current.y, sameList);
+                // console.log('列表', current.x, current.y, sameList);
             }
         }
     }
@@ -902,7 +903,8 @@ export class GameManager {
                 pList.push(p);
             }
         }
-        console.log('准备创建', pList, this._gridMap);
+        if (pList.length)
+            console.log('准备创建', pList, this._gridMap);
         if (pList.length > 1) {
             var pArr = pList;
             for (let i = 0; i < pArr.length; i++) {
@@ -910,6 +912,37 @@ export class GameManager {
                 this.createGrid(p.x, p.y);
             }
         }
+    }
+
+    /** 整理 */
+    neaton() {
+        let neatonList = [];
+        //从最左方 最下行
+        for (let j = 0; j < GameDef.GRID_WIDTH; j++) {
+            let voidIndex = -1;
+            for (let i = GameDef.GRID_HEIGHT - 1; i >= 0; i--) {
+                let foo = this._gridMap[j][i];
+                if (!foo) { //出现空
+                    voidIndex = i;
+                    break;
+                }
+            }
+            if (voidIndex > -1) {
+                //调整这行上面所有y坐标
+                for (let m = voidIndex - 1, n = 0; m >= 0; m--) {
+                    //直到查找到有的
+                    let top = this._gridMap[j][m];
+                    if (top) {
+                        //计算格子
+                        neatonList.push({ old: new cc.Vec2(j, m), new: new cc.Vec2(j, voidIndex - n) });
+                        n++;
+                    }
+                }
+            }
+        }
+        console.log('整理列表', neatonList);
+        mvc.send(Notifitions.Neaton, neatonList);
+        return neatonList.length;
     }
 
     private isCreateIceCube() {

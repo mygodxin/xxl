@@ -30,7 +30,7 @@ export default class Main extends cc.Component {
     }
 
     private onLoaderComplete(res: k7.ASourceLoader) {
-        if (res.fileName == 'game')
-            k7.AppScene.show(GameScene);
+        if (res.fileName == 'end')
+            k7.AppScene.show(StartScene);
     }
 }

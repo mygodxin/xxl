@@ -13,4 +13,5 @@ export class Notifitions {
     public static readonly ShowCountdown: string = Notifitions.Next();
     public static readonly CheckAndMoveEnd: string = Notifitions.Next();
     public static readonly GameEnd: string = Notifitions.Next();
+    public static readonly Neaton: string = Notifitions.Next();
 }
