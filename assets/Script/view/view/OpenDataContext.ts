@@ -42,7 +42,9 @@ interface RankItem {
 }
 
 export enum SubMsgAction {
-    FetchFriendInterested = 'FetchFriendInterested',        //好友关卡排行
+    FetchFriendRankData = 'FetchFriendInterested',        //好友关卡排行
+    NextPage = "NextPage",                                //下一页
+    LastPage = "LastPage"                                 //上一页
 }
 
 export enum SubValidKey {
@@ -177,6 +179,18 @@ export class WxRankProducer implements RankItem {
         this._openDataContext.postMessage({
             action: msg,
             setting: setting,
+        });
+    }
+
+    public nextPage() {
+        this._openDataContext.postMessage({
+            action: SubMsgAction.NextPage
+        });
+    }
+
+    public lastPage() {
+        this._openDataContext.postMessage({
+            action: SubMsgAction.LastPage
         });
     }
 

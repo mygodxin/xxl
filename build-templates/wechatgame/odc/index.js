@@ -3,6 +3,14 @@ const SubValidValue = {
 	FetchFriendRankData: "FetchFriendRankData",
 	FetchFriendInterested: "FetchFriendInterested", 	//获取感兴趣的好友
 	ShareToFriend: "ShareToFriend",                      //好友定向分享
+	NextPage: "NextPage",
+	LastPage: "LastPage"
+}
+
+const SubValidKey = {
+	Score: 'score',
+	Title: 'title',
+	NowTime: "nowTime"
 }
 
 let ResUrl = "subProject/rank1/"
@@ -28,32 +36,40 @@ const ADJOIN_MASK_HEIGHT = 88;				//相邻好友排行榜用户头像遮罩高�
 
 const TOP_BORDER = 15;						//顶间距
 const LEFT_BORDER = 30;						//左间距
-const ITEM_GAP = 8;							//排行榜项间距
+const ITEM_GAP = 30;							//排行榜项间距
+const ITEM_FONT = 32;
 const ADJOIN_LEFT_BORDER = 5;				//相邻好友排行榜左间距
 const ADJOIN_TOP_BORDER = 15;				//相邻好友排行榜顶间距
 const ADJOIN_ITEM_GAP = 40;					//相邻好友排行榜项间距
 const RANKING_PADDING_LEFT = 30;			//用户排名左内边距（基于排行榜项）
-const RANKING_PADDING_TOP = 30;				//用户排名上内边距（基于排行榜项）
-const NICKNAME_PADDING_LEFT = 60			//用户昵称左内边距（基于排行榜项）
-const NICKNAME_PADDING_TOP = 20;			//用户昵称上内边距（基于排行榜项）
+const RANKING_PADDING_TOP = 5;				//用户排名上内边距（基于排行榜项）
+const NICKNAME_PADDING_LEFT = 200			//用户昵称左内边距（基于排行榜项）
+const NICKNAME_PADDING_TOP = 5;			//用户昵称上内边距（基于排行榜项）
 const SCORE_PADDING_LEFT = 530;				//用户分数左内边距（基于排行榜项）
-const SCORE_PADDING_TOP = 35;				//用户分数上内边距（基于排行榜项）
-const AVATAR_PADDING_LEFT = 10;			//用户头像左内边距（基于排行榜项）
+const SCORE_PADDING_TOP = 5;				//用户分数上内边距（基于排行榜项）
+const AVATAR_PADDING_LEFT = 150;			//用户头像左内边距（基于排行榜项）
 const AVATAR_PADDING_TOP = 0;				//用户头像上内边距（基于排行榜项）
 const ADJOIN_NICKNAME_MARGIN_TOP = 35;		//相邻好友排行榜用户昵称上外边距（基于相邻好友排行榜项）
 
 const ADJOIN_SELF_POS = 3;					//相邻好友排行榜自己所处的位置，有效值 0，1，2，3，4				
 
-let ITEM_WIDTH = 500;						//排行榜单个用户宽
-let ITEM_HEIGHT = 40;						//排行榜单个用户高
+let ITEM_WIDTH = 550;						//排行榜单个用户宽
+let ITEM_HEIGHT = 60;						//排行榜单个用户高
 
-let PAGE_SIZE = 7;
+let PAGE_SIZE = 10;
 let Max_Page = 0;
 
 const dataSorter = (gameDatas) => {
 	let data = []
 	for (let i = 0; i < gameDatas.length; i++) {
 		if (gameDatas[i].KVDataList[0]) {
+			data.push(gameDatas[i])
+			data.push(gameDatas[i])
+			data.push(gameDatas[i])
+			data.push(gameDatas[i])
+			data.push(gameDatas[i])
+			data.push(gameDatas[i])
+			data.push(gameDatas[i])
 			data.push(gameDatas[i])
 		}
 	}
@@ -116,6 +132,7 @@ class RankListRenderer {
 				case SubValidValue.FetchFriendRankData:	//所有好友排行
 					this.clearFlag = true;
 					this.initRank(msg.setting);
+					this.curDataType = SubValidKey.Score;
 					this.fetchFriendRankData();
 					break;
 				case SubValidValue.FetchFriendInterested:
@@ -294,10 +311,24 @@ class RankListRenderer {
 	//绘制排行榜项
 	drawRankItem(ctx, data, itemGapY) {
 
-
+		let kvData = data.KVDataList[0];
+		let grade = kvData ? kvData.value : 0;
+		let rank = this.gameDatas.indexOf(data) + 1;
 		let nick = data.nickname.length <= 5 ? data.nickname : data.nickname.substr(0, 4) + "...";
 		itemGapY += TOP_BORDER;
 
+		//排名
+		DrawUtil.drawText(ctx, {
+			content: rank + "",
+			x: RANKING_PADDING_LEFT,
+			y: RANKING_PADDING_TOP + itemGapY,
+			align: "left",
+			baseLine: "top",
+			color: "#000000",
+			fontSize: ITEM_FONT,
+		});
+
+		//名字
 		DrawUtil.drawText(ctx, {
 			content: nick + "",
 			x: NICKNAME_PADDING_LEFT,
@@ -305,7 +336,7 @@ class RankListRenderer {
 			align: "left",
 			baseLine: "top",
 			color: "#000000",
-			fontSize: 18,
+			fontSize: ITEM_FONT,
 		});
 
 
@@ -318,6 +349,17 @@ class RankListRenderer {
 			h: AVATAR_HEIGHT
 		}, () => {
 			this.drawToCanvas();
+		});
+
+		//积分
+		DrawUtil.drawText(ctx, {
+			content: parseInt(grade) + "",
+			x: SCORE_PADDING_LEFT,
+			y: SCORE_PADDING_TOP + itemGapY,
+			align: "right",
+			baseLine: "top",
+			color: "#000000",
+			fontSize: ITEM_FONT,
 		});
 	}
 

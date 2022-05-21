@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="640,868" designImage="ui://ev5d5l1x9imx2" designImageOffsetX="-56" designImageOffsetY="-376" designImageLayer="1">
   <displayList>
-    <image id="n0_9imx" name="n0" src="9imx1" fileName="img/组 50@2x.png" xy="0,0"/>
+    <image id="n0_9imx" name="n0" src="8d433" fileName="img/组 50@2x(1).png" xy="0,0"/>
     <text id="n1_9imx" name="n1" xy="53,171" size="68,44" fontSize="32" color="#663300" align="center" vAlign="middle" text="名次"/>
-    <text id="n2_9imx" name="n2" xy="251,171" size="68,44" fontSize="32" color="#663300" align="center" vAlign="middle" text="姓名"/>
+    <text id="n2_9imx" name="n2" xy="252,171" size="68,44" fontSize="32" color="#663300" align="center" vAlign="middle" text="姓名"/>
     <text id="n3_9imx" name="n3" xy="518,171" size="68,44" fontSize="32" color="#663300" align="center" vAlign="middle" text="分数"/>
-    <loader id="n4_9imx" name="render" xy="45,229" size="550,601"/>
     <component id="n5_9imx" name="btnClose" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="569,34" size="38,39">
       <Button icon="ui://zmhnw1c69imxiooiq"/>
     </component>
+    <list id="n6_8d43" name="list" xy="43,229" size="568,589" overflow="scroll" margin="10,0,10,0" lineGap="20" defaultItem="ui://ev5d5l1x8d434" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
   </displayList>
 </component>

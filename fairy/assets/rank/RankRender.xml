@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="551,50">
+  <controller name="sel" pages="0,,1," selected="0"/>
+  <displayList>
+    <text id="n1_nwyg" name="txtRank" xy="-1,0" size="65,50" fontSize="32" vAlign="middle" autoSize="none" text="2222"/>
+    <text id="n2_8d43" name="txtName" xy="186,0" size="95,50" fontSize="32" align="center" autoSize="none" text="2222"/>
+    <text id="n3_8d43" name="txtScore" xy="472,0" size="65,50" fontSize="32" align="right" vAlign="middle" autoSize="none" text="2222"/>
+  </displayList>
+</component>

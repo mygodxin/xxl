@@ -1,9 +1,12 @@
+import { GameDef } from "../../define/GameDef";
+import { GameManager } from "../../logic/GameManager";
 import { OpenDataContWinType, RankSetting, SubMsgAction, WxRankProducer } from "./OpenDataContext";
 
 export class RankWin extends k7.AppWindow {
 
     loaderFriendInfo: GLoader;
     btnClose: GButton;
+    list: GList;
 
     constructor() {
         super('RankWin', 'rank');
@@ -20,6 +23,9 @@ export class RankWin extends k7.AppWindow {
     bindChild() {
         this.btnClose = this.getButton('btnClose');
         this.loaderFriendInfo = this.getLoader('render');
+        this.list = this.getList('list');
+        this.list.itemRenderer = this.itemRenderer.bind(this);
+        // this.on(fgui.Event.TOUCH_MOVE);
     }
 
     onEvent(eventName: string, params: any) {
@@ -39,6 +45,16 @@ export class RankWin extends k7.AppWindow {
         this.showRank();
     }
 
+    private itemRenderer(index: number, obj: GObject): void {
+        const data = this.list.data[index];
+        let txtRank = obj.asCom.getChild('txtRank').asTextField;
+        let txtName = obj.asCom.getChild('txtName').asTextField;
+        let txtScore = obj.asCom.getChild('txtScore').asTextField;
+        txtRank.text = '';
+        txtName.text = '';
+        txtScore.text = '';
+    }
+
     protected onHide(): void {
         this.shutdown();
     }
@@ -53,6 +69,6 @@ export class RankWin extends k7.AppWindow {
             cvsHeight: this.loaderFriendInfo.height,
             interval: 100,
         }
-        WxRankProducer.rank.showRank(SubMsgAction.FetchFriendInterested, setting, this.loaderFriendInfo, OpenDataContWinType.FriendListWin);
+        WxRankProducer.rank.showRank(SubMsgAction.FetchFriendRankData, setting, this.loaderFriendInfo, OpenDataContWinType.FriendListWin);
     }
 }
