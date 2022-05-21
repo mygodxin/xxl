@@ -22,7 +22,7 @@
       <item/>
       <item/>
     </list>
-    <text id="n12_9imx" name="n12" xy="165,39" size="134,54" fontSize="40" color="#ffffff" bold="true" text="90金币"/>
-    <text id="n13_9imx" name="n13" xy="499,37" size="93,54" fontSize="40" color="#ffffff" vAlign="middle" bold="true" text="48秒"/>
+    <text id="n12_9imx" name="txtGold" xy="165,39" size="134,54" fontSize="40" color="#ffffff" bold="true" text="90金币"/>
+    <text id="n13_9imx" name="txtTime" xy="499,37" size="93,54" fontSize="40" color="#ffffff" vAlign="middle" bold="true" text="48秒"/>
   </displayList>
 </component>

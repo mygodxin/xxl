@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="750,1334" designImage="ui://eqhf79fh9imx1" designImageOffsetX="-22" designImageOffsetY="-297" designImageLayer="1">
+<component size="700,1021" designImage="ui://eqhf79fh9imx1" designImageOffsetX="-22" designImageOffsetY="-297" designImageLayer="1">
   <displayList>
     <image id="n5_9imx" name="n5" src="9imx7" fileName="img/组 50@2x.png" xy="29,153"/>
-    <component id="n1_9imx" name="btnStart" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="363,754" size="234,90">
+    <component id="n1_9imx" name="btnRank" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="363,754" size="234,90">
       <Button icon="ui://eqhf79fh9imxd"/>
     </component>
     <component id="n2_9imx" name="btnAgain" src="h6bvf" fileName="comp/IconButton.xml" pkg="zmhnw1c6" xy="108,754" size="234,90">

@@ -51,7 +51,7 @@ export class GameManager {
     public getGridByPoint(p) {
         if (this._gridMap == null) return null;
         if (!this.isOnMap(p)) return null;
-        return this._gridMap[p.y, p.x];
+        return this._gridMap[p.x][p.y];
     }
     public getGridByIndex(index) {
         let p = new cc.Vec2(index % GameDef.GRID_WIDTH, index / GameDef.GRID_WIDTH);
@@ -104,7 +104,7 @@ export class GameManager {
 
         //剩余颜色中随机一个
         random = Util.getRandom(0, tar.length);
-        // console.log('最终颜色', x + y * GameDef.GRID_WIDTH, round, tar[random])
+        console.log('最终颜色', x + y * GameDef.GRID_WIDTH, round, tar[random], tar, random);
         return tar[random];
     }
 
@@ -499,7 +499,7 @@ export class GameManager {
         let yList = [];
         for (let k in boomList) {
             let p = boomList[k];
-            if (yList[p.y] == undefined) yList[p.x] = 0;
+            if (yList[p.y] == undefined) yList[p.y] = 0;
             yList[p.y]++;
         }
         for (let i = 0; i < yList.length; i++) {
@@ -543,7 +543,8 @@ export class GameManager {
         //         this._otherScore += score;
         //         break;
         // }
-        this.tempScore = 0;
+        // this.tempScore = 0;
+        this._myScore += score;
         mvc.send(Notifitions.ScoreUpdate, score);
         if (this.recordScore != 0 && this.myScore > this.recordScore) {
             k7.Engine.saveLocal(StorageDef.RECORD, this.myScore);
@@ -577,6 +578,7 @@ export class GameManager {
                 continue;
             if (curGrid.color == tempGird.color) {
                 this.FillSameItemsList(sameList, tempItemList[i]);
+                console.log('列表', current.x, current.y, sameList);
             }
         }
     }
@@ -677,6 +679,7 @@ export class GameManager {
                     }
                     gridList.push(this._gridMap[p.x][p.y]);
                     this._gridMap[p.x][p.y] = null;
+                    console.log('清空格子', p.x, p.y);
                 }
             }
         }
@@ -733,7 +736,7 @@ export class GameManager {
 
     public isFinished() {
         let colorNumList = [0, 0, 0, 0, 0, 0];
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             let y = i / GameDef.GRID_WIDTH;
             let x = i % GameDef.GRID_WIDTH;
             if (this._gridMap[x][y] == null)
@@ -761,7 +764,7 @@ export class GameManager {
         let tarColor = -1;
         //获取场上有的颜色
         let colorList = [];
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             let p = this.indexToPoint(i);
             if (this._gridMap[p.x][p.y] == null)
                 continue;
@@ -776,7 +779,7 @@ export class GameManager {
 
         let tempBoomList = [];
         let score = 0;
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             let p = this.indexToPoint(i);
             if (this._gridMap[p.y, p.x] == null)
                 continue;
@@ -801,8 +804,8 @@ export class GameManager {
     /// </summary>
     public elimRandomCount() {
         let count = Util.getRandom(this._minLightningElimCount, this._maxLightningElimCount + 1);
-        count = Math.min(count, this._gridMap.length);
-        // List<> list = Util.getRandomWithoutRep(0, this._gridMap.length, count);
+        count = Math.min(count, GameDef.GRID_TOTAL_COUNT);
+        // List<> list = Util.getRandomWithoutRep(0, GameDef.GRID_TOTAL_COUNT, count);
         this.elimCount(count, true);
         this.isReset();
     }
@@ -810,7 +813,7 @@ export class GameManager {
     public elimCount(count, isItem = false) {
         let list = [];
         while (list.length < count) {
-            let random = Util.getRandom(0, this._gridMap.length);
+            let random = Util.getRandom(0, GameDef.GRID_TOTAL_COUNT);
             let p = this.indexToPoint(random);
             if (this._gridMap[p.x][p.y] != null && list.indexOf(random) < 0)
                 list.push(random);
@@ -818,7 +821,7 @@ export class GameManager {
 
         let score = 0;
         let tempBoomList = [];
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             if (list.indexOf(i) >= 0) {
                 let p = this.indexToPoint(i);
                 if (this._gridMap[p.x][p.y] == null)
@@ -893,12 +896,13 @@ export class GameManager {
         let createCount = this.getCreateCount();
         //筛选空格子
         let pList = [];
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             p = this.indexToPoint(i);
-            if (this._gridMap[p.y, p.x] == null && this.isMap(p)) {
+            if (this._gridMap[p.x][p.y] == null && this.isMap(p)) {
                 pList.push(p);
             }
         }
+        console.log('准备创建', pList, this._gridMap);
         if (pList.length > 1) {
             var pArr = pList;
             for (let i = 0; i < pArr.length; i++) {
@@ -919,7 +923,7 @@ export class GameManager {
         // let createCount = this.getCreateCount();
         // //筛选空格子
         // let pList = [];
-        // for (let i = 0; i < this._gridMap.length; i++) {
+        // for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
         //     p = this.indexToPoint(i);
         //     if (this._gridMap[p.y, p.x] != null && !this.isBarrier(this._gridMap[p.y, p.x]) && this.isMap(p)) {
         //         pList.push(p);
@@ -950,7 +954,7 @@ export class GameManager {
         // createCount = this.getCreateCount();
         // //筛选空格子
         // pList = [];
-        // for (i = 0; i < this._gridMap.length; i++) {
+        // for (i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
         //     p = this.indexToPoint(i);
         //     if (this._gridMap[p.y, p.x] != null && !this.isBarrier(this._gridMap[p.y, p.x]) && this.isMap(p)) {
         //         pList.push(p);
@@ -994,7 +998,7 @@ export class GameManager {
     }
     public checkCountdown() {
         let totalCount = 0;
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             let y = parseInt(i / GameDef.GRID_WIDTH + '');
             let x = i % GameDef.GRID_WIDTH;
             if (this._gridMap[x][y] == null)
@@ -1022,7 +1026,7 @@ export class GameManager {
     }
     private resetMap() {
         //  count = 0;
-        for (let i = 0; i < this._gridMap.length; i++) {
+        for (let i = 0; i < GameDef.GRID_TOTAL_COUNT; i++) {
             var p = this.indexToPoint(i);
             if (this._gridMap[p.x][p.y] != null) {
                 return false;

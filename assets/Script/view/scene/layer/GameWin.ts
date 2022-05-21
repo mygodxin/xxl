@@ -1,6 +1,7 @@
 import { GameDef, Grid } from "../../../define/GameDef";
 import { Notifitions } from "../../../define/Notification";
 import { GameManager } from "../../../logic/GameManager";
+import { EndWin } from "./EndWin";
 
 export class GameWin extends k7.AppWindow {
 
@@ -8,6 +9,9 @@ export class GameWin extends k7.AppWindow {
     txtTime: GTextField;
     list: GList;
     gridMap
+    debug = false;
+    private time: number;
+    private readonly maxTime: number = 10;
 
     constructor() {
         super('GameWin', 'game');
@@ -18,8 +22,22 @@ export class GameWin extends k7.AppWindow {
 
         this.eventList = [
             Notifitions.CreateNewGrid,
-            Notifitions.CheckAndMoveEnd
+            Notifitions.CheckAndMoveEnd,
+            Notifitions.ScoreUpdate
         ];
+    }
+    onEvent(eventName: string, params: any) {
+        switch (eventName) {
+            case Notifitions.CreateNewGrid:
+                this.onCreateNewGrid(params);
+                break;
+            case Notifitions.CheckAndMoveEnd:
+                this.onCheckAndMoveEnd(params);
+                break;
+            case Notifitions.ScoreUpdate:
+                this.updateScore();
+                break;
+        }
     }
 
     bindChild() {
@@ -40,7 +58,10 @@ export class GameWin extends k7.AppWindow {
             return;
         }
         loader.url = `ui://game/组 ${data.color + 1}@2x`;
-        obj.asCom.getChild('title').asTextField.text = data.color;
+        obj.asCom.getChild('title').asTextField.text = this.debug ? data.color : '';
+        obj.asCom.visible = true;
+        obj.asCom.scaleX = obj.asCom.scaleY = 1;
+        console.log('生成新点', obj.asCom, index);
         // target.getController("show").selectedIndex = data[index] != "" ? 1 : 0;
     }
 
@@ -95,7 +116,7 @@ export class GameWin extends k7.AppWindow {
         curFlyItem.y = top + curItem.y;
         this.addChild(curFlyItem);
         lastItem.getChild('icon').asLoader.url = curUrl;
-        lastItem.getChild('title').asTextField.text = curColor;
+        lastItem.getChild('title').asTextField.text = this.debug ? curColor : '';
 
 
         let lastFlyItem = fgui.UIPackage.createObject('game', 'ListRender').asCom;
@@ -104,7 +125,7 @@ export class GameWin extends k7.AppWindow {
         lastFlyItem.y = top + lastItem.y;
         this.addChild(lastFlyItem);
         curItem.getChild('icon').asLoader.url = lastUrl;
-        curItem.getChild('title').asTextField.text = lastColor;
+        curItem.getChild('title').asTextField.text = this.debug ? lastColor : '';
 
         lastItem.visible = curItem.visible = false;
 
@@ -137,40 +158,103 @@ export class GameWin extends k7.AppWindow {
             const y = parseInt(i / GameDef.GRID_WIDTH + '');
 
         }
+        this.updateScore();
+        this.countdown();
     }
 
-    onEvent(eventName: string, params: any) {
-        switch (eventName) {
-            case Notifitions.CreateNewGrid:
-                const p = GameManager.inst.pointToIndex(params);
-                this.itemRenderer(p, this.list.getChildAt(p));
-                break;
-            case Notifitions.CheckAndMoveEnd:
-                this.onCheckAndMoveEnd(params);
-                break;
-        }
+    updateScore() {
+        this.txtGold.text = GameManager.inst.myScore + '金币';
     }
 
+    timeid
+    /** 倒计时 */
+    countdown() {
+        this.time = this.maxTime;
+        this.txtTime.text = this.time + '秒';
+        this.timeid = setInterval(() => {
+            this.time--;
+            if (this.time <= 0) {
+                clearInterval(this.timeid);
+                this.txtTime.text = '0秒';
+                this.hide();
+                k7.AppWindow.show(EndWin);
+                return;
+            }
+            this.txtTime.text = this.time + '秒';
+        }, 1000);
+    }
+
+    onCreateNewGrid(p) {
+        const left = this.list.x + this.list.margin.left;
+        const top = this.list.y + this.list.margin.top;
+
+        const index = GameManager.inst.pointToIndex(p);
+        const comp = this.list.getChildAt(index);
+
+        let data = GameManager.inst.getMap()[p.x][p.y];
+        const lastUrl = `ui://game/组 ${data.color + 1}@2x`;
+        let flyComp = fgui.UIPackage.createObject('game', 'ListRender').asCom;
+        flyComp.getChild('icon').asLoader.url = lastUrl;
+        flyComp.getChild('title').asTextField.text = this.debug ? data.color : '';
+        flyComp.x = left + comp.x + flyComp.width / 2;
+        flyComp.y = -this.height / 2//top + comp.y + flyComp.height / 2;
+        flyComp.setPivot(0.5, 0.5, true);
+        this.addChild(flyComp);
+
+        cc.tween(flyComp)
+            .to(0.5, { y: top + comp.y + flyComp.height / 2 })
+            .call(() => {
+                flyComp.removeFromParent();
+
+                this.itemRenderer(index, comp);
+                this.canMove = true;
+            })
+            .start();
+        // if (!data) {
+        //     loader.url = '';
+        //     return;
+        // }
+        // loader.url = `ui://game/组 ${data.color + 1}@2x`;
+        // obj.asCom.getChild('title').asTextField.text = data.color;
+    }
+
+    /** 消除 */
     onCheckAndMoveEnd(tempBoomList: cc.Vec2[]) {
         if (tempBoomList.length > 0) {
             for (let f in tempBoomList) {
                 const foo = tempBoomList[f];
                 for (let m in foo) {
                     const p = GameManager.inst.pointToIndex(foo[m]);
-                    console.log('查看', p);
-                    const comp = this.list.getChildAt(p);
-                    cc.tween(comp)
+                    console.log('消除点', p);
+                    const comp = this.list.getChildAt(p).asCom;
+
+                    const left = this.list.x + this.list.margin.left;
+                    const top = this.list.y + this.list.margin.top;
+
+                    const lastUrl = comp.getChild('icon').asLoader.url;
+                    let hideComp = fgui.UIPackage.createObject('game', 'ListRender').asCom;
+                    hideComp.getChild('icon').asLoader.url = lastUrl;
+                    hideComp.x = left + comp.x + hideComp.width / 2;
+                    hideComp.y = top + comp.y + hideComp.height / 2;
+                    hideComp.setPivot(0.5, 0.5, true);
+                    this.addChild(hideComp);
+
+                    comp.getChild('icon').asLoader.url = '';
+                    cc.tween(hideComp)
                         .sequence(
                             cc.tween().to(0.2, { scaleX: 1.2, scaleY: 1.2 }),
                             cc.tween().to(0.5, { scaleX: 0, scaleY: 0 }),
                         )
                         .call(() => {
-
+                            hideComp.removeFromParent();
+                            GameManager.inst.addScore(1);
                         })
                         .start();
                 }
             }
-            GameManager.inst.createNewGrid();
+            setTimeout(() => {
+                GameManager.inst.createNewGrid();
+            }, 1000);
         } else
             this.canMove = true;
     }

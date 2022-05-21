@@ -8,7 +8,7 @@ export class Util {
 			maxNum = min;
 			minNum = max;
 		}
-		return parseInt(Math.random() * maxNum - minNum + minNum + '');
+		return parseInt(Math.random() * maxNum - minNum + '');
 	}
 
 	/**获取当前时间戳 */
