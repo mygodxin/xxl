@@ -9,9 +9,9 @@ export class GameWin extends k7.AppWindow {
     txtTime: GTextField;
     list: GList;
     gridMap
-    debug = true;
+    debug = false;
     private time: number;
-    private readonly maxTime: number = 30;
+    private readonly maxTime: number = 90;
 
     constructor() {
         super('GameWin', 'game');
@@ -92,13 +92,18 @@ export class GameWin extends k7.AppWindow {
                 let ctrlSel = item.asCom.getController('sel');
                 ctrlSel.selectedIndex = ctrlSel.selectedIndex == 0 ? 1 : 0;
 
-                this.curSel = sel;
+                if (this.curSel == sel) {
+                    this.curSel = undefined;
+                } else
+                    this.curSel = sel;
             }
         } else {
             let ctrlSel = item.asCom.getController('sel');
             ctrlSel.selectedIndex = ctrlSel.selectedIndex == 0 ? 1 : 0;
-
-            this.curSel = sel;
+            if (this.curSel == sel) {
+                this.curSel = undefined;
+            } else
+                this.curSel = sel;
         }
 
     }
@@ -165,7 +170,7 @@ export class GameWin extends k7.AppWindow {
 
         }
         this.updateScore();
-        // this.countdown();
+        this.countdown();
     }
 
     updateScore() {
@@ -255,16 +260,17 @@ export class GameWin extends k7.AppWindow {
             }
 
             if (!GameManager.inst.neaton()) {
+                console.log('不需要整理')
                 setTimeout(() => {
                     GameManager.inst.createNewGrid();
+                    this.canMove = true;
                 }, 300);
-                this.canMove = true;
             }
         } else {
             setTimeout(() => {
                 GameManager.inst.createNewGrid();
+                this.canMove = true;
             }, 300);
-            this.canMove = true;
         }
     }
 

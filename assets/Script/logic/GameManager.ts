@@ -1079,7 +1079,7 @@ export class GameManager {
         let grid = this._gridMap[curX][curY];
         this._gridMap[curX][curY] = this._gridMap[tarX][tarY];
         this._gridMap[tarX][tarY] = grid;
-        console.log('交换', curX, curY, tarX, tarY);
+        // console.log('交换', curX, curY, tarX, tarY);
     }
 
     // public move(curIndex, tarIndex) {

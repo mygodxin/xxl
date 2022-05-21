@@ -12,7 +12,7 @@ export class GameDef {
     /** 游戏倒计时 */
     public static readonly countdownCount = 90;
     /** 最低触发消除数 */
-    static readonly CAN_ELIMINATE = 3;
+    static readonly CAN_ELIMINATE = 4;
 }
 
 export class Grid {
