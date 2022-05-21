@@ -4,7 +4,7 @@ import { OpenDataContWinType, RankSetting, SubMsgAction, WxRankProducer } from "
 
 export class RankWin extends k7.AppWindow {
 
-    loaderFriendInfo: GLoader;
+    // loaderFriendInfo: GLoader;
     btnClose: GButton;
     list: GList;
 
@@ -22,7 +22,7 @@ export class RankWin extends k7.AppWindow {
 
     bindChild() {
         this.btnClose = this.getButton('btnClose');
-        this.loaderFriendInfo = this.getLoader('render');
+        // this.loaderFriendInfo = this.getLoader('render');
         this.list = this.getList('list');
         this.list.itemRenderer = this.itemRenderer.bind(this);
         // this.on(fgui.Event.TOUCH_MOVE);
@@ -42,7 +42,7 @@ export class RankWin extends k7.AppWindow {
     }
 
     refreshUi(): void {
-        this.showRank();
+        // this.showRank();
     }
 
     private itemRenderer(index: number, obj: GObject): void {
@@ -63,12 +63,12 @@ export class RankWin extends k7.AppWindow {
         WxRankProducer.rank.hideRank();
     }
 
-    private showRank() {
-        let setting: RankSetting = {
-            cvsWidth: this.loaderFriendInfo.width,
-            cvsHeight: this.loaderFriendInfo.height,
-            interval: 100,
-        }
-        WxRankProducer.rank.showRank(SubMsgAction.FetchFriendRankData, setting, this.loaderFriendInfo, OpenDataContWinType.FriendListWin);
-    }
+    // private showRank() {
+    //     let setting: RankSetting = {
+    //         cvsWidth: this.loaderFriendInfo.width,
+    //         cvsHeight: this.loaderFriendInfo.height,
+    //         interval: 100,
+    //     }
+    //     WxRankProducer.rank.showRank(SubMsgAction.FetchFriendRankData, setting, this.loaderFriendInfo, OpenDataContWinType.FriendListWin);
+    // }
 }

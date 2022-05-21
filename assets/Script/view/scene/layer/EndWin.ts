@@ -11,6 +11,7 @@ export class EndWin extends k7.AppWindow {
     btnStart: GButton;
     txtScore: GTextField;
     txtMaxScore: GTextField;
+    txtTip: GTextField;
 
     constructor() {
         super('EndWin', 'end');
@@ -30,6 +31,7 @@ export class EndWin extends k7.AppWindow {
         this.btnStart = this.getButton('btnStart');
         this.txtScore = this.getTextField('txtScore');
         this.txtMaxScore = this.getTextField('txtMaxScore');
+        this.txtTip = this.getTextField('txtTip');
     }
 
 
@@ -56,8 +58,9 @@ export class EndWin extends k7.AppWindow {
 
     refreshUi(): void {
         const score = GameManager.inst.myScore;
-        WxRankProducer.uploadClounStorage(SubValidKey.Score, score);
-        this.txtScore.text = score + '';
-        this.txtMaxScore.text = k7.Engine.readLocal(StorageDef.RECORD, true);
+        // WxRankProducer.uploadClounStorage(SubValidKey.Score, score);
+        this.txtScore.text = `${score}分`;
+        this.txtMaxScore.text = `历史最好成绩:${k7.Engine.readLocal(StorageDef.RECORD, true)}分`;
+        this.txtTip.text = `排名保持在前${1}名！`
     }
 }
