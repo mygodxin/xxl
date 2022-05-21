@@ -1,5 +1,6 @@
 const SubValidValue = {
 	//子域接收消息名
+	FetchFriendRankData: "FetchFriendRankData",
 	FetchFriendInterested: "FetchFriendInterested", 	//获取感兴趣的好友
 	ShareToFriend: "ShareToFriend",                      //好友定向分享
 }
@@ -112,6 +113,11 @@ class RankListRenderer {
 		wx.onMessage(msg => {
 			console.log('msg', msg);
 			switch (msg.action) {
+				case SubValidValue.FetchFriendRankData:	//所有好友排行
+					this.clearFlag = true;
+					this.initRank(msg.setting);
+					this.fetchFriendRankData();
+					break;
 				case SubValidValue.FetchFriendInterested:
 					this.clearFlag = true;
 					this.initRank(msg.setting);
