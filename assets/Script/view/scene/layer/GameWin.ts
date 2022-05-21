@@ -11,7 +11,7 @@ export class GameWin extends k7.AppWindow {
     gridMap
     debug = false;
     private time: number;
-    private readonly maxTime: number = 5;
+    private readonly maxTime: number = 10;
 
     constructor() {
         super('GameWin', 'game');
@@ -171,6 +171,7 @@ export class GameWin extends k7.AppWindow {
         }
         this.updateScore();
         this.countdown();
+        this.canMove = true;
     }
 
     updateScore() {

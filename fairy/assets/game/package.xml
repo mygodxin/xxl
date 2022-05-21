@@ -43,6 +43,7 @@
     <image id="8d4313" name="icon2.png" path="/img/" exported="true"/>
     <image id="8d4314" name="icon3.png" path="/img/" exported="true"/>
     <image id="8d4315" name="icon4.png" path="/img/" exported="true"/>
+    <image id="8d4316" name="微信图片_20220521162423.png" path="/img/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

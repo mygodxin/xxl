@@ -2,9 +2,10 @@
 <component size="90,90">
   <controller name="sel" pages="0,,1," selected="0"/>
   <displayList>
-    <loader id="n0_9imx" name="icon" xy="0,0" size="90,90" url="ui://ecpfrqsm9imxl">
-      <gearColor controller="sel" pages="1" values="#ff0000" default="#ffffff"/>
-    </loader>
+    <loader id="n0_9imx" name="icon" xy="0,0" size="90,90" url="ui://ecpfrqsm9imxl"/>
     <text id="n1_nwyg" name="title" xy="45,49" size="40,42" fontSize="30" color="#ff0000" align="right" autoSize="none" text="2"/>
+    <image id="n2_8d43" name="n2" src="8d4316" fileName="img/微信图片_20220521162423.png" xy="0,0">
+      <gearDisplay controller="sel" pages="1"/>
+    </image>
   </displayList>
 </component>
